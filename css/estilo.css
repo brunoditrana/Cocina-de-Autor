@@ -1,0 +1,575 @@
+*{
+    margin: 0;
+   box-sizing: border-box;
+   
+}
+html{ 
+    height: auto;
+
+    overflow-x: hidden;
+    background-image: url(/img/fondoo3.png) ;
+    background-attachment: fixed;
+}
+
+#grilla{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: "header" "main" "footer" ;
+   
+    
+}
+
+
+header{                  /* Encabezado*/
+    grid-area: header;
+    background-color: #fec451;
+    border-bottom: 1px solid black;
+    box-shadow: 1px 1px 3px 2px rgb(110, 109, 109);
+  
+}
+#contenedorHeader{                /* Encabezado GRID*/
+    display: grid;
+    grid-template-columns: 10% 85%;
+  
+    grid-template-rows: auto;
+    grid-template-areas: "imgLogo navHeader";
+   
+}
+.imgLogo{                       /* Encabezado GRID*/
+    grid-area: imgLogo ;     
+}
+.imgLogo img{                   /* Encabezado GRID*/
+    width: 5rem;
+    margin: 6px 0px 6px 20px;
+}
+.navHeader{                     /* Encabezado GRID*/
+    grid-area: navHeader;
+    align-self: center;
+}
+.navHeader ul{   
+    max-width: 90%;               /* Encabezado GRID*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    list-style:none;     
+    justify-content: space-around;
+}
+ul li a{                         /* Encabezado GRID*/
+    width: 20%; 
+}
+a.cabecero-op{                 /* Encabezado Botones*/  
+    background-color: #c6eff0;
+    font-size: 20px;
+    font-family: 'Cormorant', serif;
+    font-weight: 400;
+    padding: 12px 60px;
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+    border-radius: 2px 8px 2px 8px;
+}
+a.cabecero-op:hover{                   /* Encabezado Botones*/
+    background-color: #fadaa3;
+}
+
+
+
+/* COMIENZA MAIN*/
+
+#contenedorMain{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+     "tituloMain" 
+     "contenedorImgMain"  
+     "contenedorVideoMain"
+}
+
+main{
+    grid-area: main;
+    max-width: 99%;
+    margin-bottom: 100px;
+}
+.tituloMain{
+    grid-area: tituloMain;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    
+}
+.titulo1{                                  /*Titulo*/
+    text-align: center;
+    font-size: 75px;
+    margin: 60px 0;
+    font-family: 'Original Surfer', cursive;
+   color: rgb(41, 39, 39);
+   text-shadow: 4px 2px 3px  rgb(170, 165, 165);
+   background-color: rgba(197, 227, 227, 0.303);
+    
+   width: auto;
+   border-radius: 20px;
+   padding: 10px;
+}
+
+
+
+.contenedorImgMain{                   /* Imagenes Principal*/
+    grid-area: contenedorImgMain;
+    max-width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    margin:auto;
+    margin-bottom: 100px;
+}
+.imagenCentral{                   /* Imagenes Principal*/
+    width:21rem;
+    height:21rem;
+    overflow:hidden;
+}
+.imagen img{                        /* Imagenes Principal*/
+    width:95%;
+    height:19rem;
+    opacity: 0.6;
+    box-shadow: 1px 1px 1px 1px gray;
+}
+.imagen img:hover{                 /* Imagenes Principal*/
+ opacity: 1;
+ box-shadow: 4px 1px 3px 1px gray;
+}
+
+
+
+
+.contenedorVideoMain{                /* Video + Parrafo*/ 
+    grid-area: contenedorVideoMain;   
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+   padding: 30px;
+}
+.dividir-video{                   /* Video + Parrafo*/  
+    width: 50%;
+    
+}
+.dividir-video.linea{
+    border-left: 4px solid rgb(255, 139, 56);
+}
+.videoYou{                           /* Video + Parrafo*/ 
+    width:560px; 
+    height:315px;
+    margin-left: 40px;
+    
+}
+.titulo-cocina{                   /* Video + Parrafo*/ 
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-family: 'Original Surfer', cursive;
+    
+}
+.parrafo-cocina{                      /* Video + Parrafo*/ 
+    font-size: 28px;
+    margin-top: 45px;
+    padding: 50px;
+}
+
+
+
+footer{  
+                 /* Pie de Pagina*/ 
+    grid-area: footer;             
+    
+    background-color: #83a6d2;
+    border-bottom: 1px solid black;
+    box-shadow: 1px 1px 3px 2px rgb(110, 109, 109);
+    
+}
+.contenedorFooter{                   /* Pie de Pagina*/ 
+    display:grid;
+    grid-template-columns: 30% 50% 20%;
+    grid-template-rows: auto; 
+    grid-template-areas: "divirMarcas" "dividirRedes" "dividirLogo";
+    
+}
+.divirMarcas{                      /* Pie de Pagina*/ 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ margin-bottom: 20px;
+}
+img.img-publicidad{                       /* Pie de Pagina*/ 
+    width: 80px;
+    height: 50px;
+    margin-top: 30px;
+    margin-left: 10px;
+   
+}
+.dividirRedes{                            /* Pie de Pagina*/ 
+    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 3px solid rgb(255, 139, 56);
+  border-right: 3px solid rgb(255, 139, 56);
+}
+.img-redes{                     /* Pie de Pagina*/ 
+   width: 3rem;
+   margin-left: 0.5rem;
+}
+p.texto-redes{                                 /* Pie de Pagina*/ 
+    font-size: 23px;
+    margin-left: 35px;
+
+    margin-right: 1rem;
+    font-weight: bold;
+    color: #f4a545;
+    text-shadow: 1px 1px 1px  rgb(51, 50, 50);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.dividirLogo{                            /* Pie de Pagina*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+
+
+/*PAGINA CONTACTOS*/
+
+
+
+.dividirComentarios{
+    display: grid;
+    grid-template-columns: 55% 40%;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "tituloContacto tituloContacto"
+    "formulario imagenFormulario";
+
+}
+.imgFormulario{
+    grid-area:imagenFormulario ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.imgFormulario img{
+    
+    width: 88%;
+    border-radius: 5px;
+    border: 0.5rem outset rgb(246, 176, 110);
+    box-shadow: 3px 2px 4px  gray;
+    margin-top: 0.5rem;
+}
+.tituloContacto{
+    grid-area:tituloContacto ;
+}
+.tituloContacto .titulo1{
+   background-color: rgba(255, 255, 255, 0);
+   margin: 3rem;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+/*FORMULARIO*/
+
+.formulario-contacto{
+    grid-area: formulario;
+    width: 70%;
+    
+    border: 4px outset rgb(239, 180, 112);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto 1rem;
+    background: linear-gradient(  #f5c57e, #d3ac79 );
+    box-shadow: 4px 2px 5px 2px gray;
+    border-radius: 3px;
+}
+.contenedor-form{
+    margin: 1rem;
+    width: 90%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #353432;
+    text-shadow: 1px 1px 1px rgb(255, 238, 238);
+}
+input{
+    width: 70%;
+    padding: 10px;
+    margin-top: 10px auto;
+    border-radius: 5px;
+    border: 1px solid black;
+    
+}
+textarea{
+    width: 70%;
+    display: flex;
+    margin: 3px  auto;
+
+}
+.contenedor-form button{
+    padding: 13px;
+    font-size: 20px;
+    display: flex;
+    margin: auto;
+    cursor: pointer;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+
+/*Pagina  INFORMACION*/
+
+.dividirInformacion{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto ;
+    grid-template-areas: 
+    "tituloInformacion"
+    "consigna1"
+    "parrafo1"
+    "consigna2"
+    "parrafo2"
+    "consigna3"
+    "parrafo3"
+    "consigna4"
+    "parrafo4"
+    "consigna5"
+    "parrafo5"
+    ;
+}
+.tituloInformacion{ grid-area:tituloInformacion ;}
+.consignaInfo.laUno{ grid-area: consigna1;}
+.parrafoInfo.elUno{ grid-area:parrafo1 ;}
+.consignaInfo.laDos{ grid-area:consigna2 ;}
+.parrafoInfo.elDos{ grid-area:parrafo2 ;}
+.consignaInfo.laTres{ grid-area:consigna3 ;}
+.parrafoInfo.elTres{ grid-area:parrafo3 ;}
+.consignaInfo.laCuatro{ grid-area:consigna4 ;}
+.parrafoInfo.elCuatro{ grid-area:parrafo4 ;}
+.consignaInfo.laCinco{ grid-area:consigna5 ;}
+.parrafoInfo.elCinco{ grid-area:parrafo5 ;}
+
+.dividirInformacion{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.consignaInfo{
+    font-size: 1.2rem;
+    font-family: 'Original Surfer';
+    font-weight: bold;
+    text-shadow: 1px 2px 2px rgb(165, 163, 163);
+    color: rgb(37, 47, 48);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.tituloConsigna{
+    width: 100%;
+    background-color: #fbd6a8;
+    border-radius: 6px;
+    padding: 1rem 1.5rem;
+    margin: 0.8rem auto;
+    border: 1px solid #5f5d5449;
+    
+}
+
+.parrafoInfo{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.textoParrafo{
+    background-color: #bdd9fc;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height:1.5rem ;
+    text-indent:2rem;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem 4rem;
+    border-radius: 1rem;
+    border: 1px solid #54595f49;
+}
+
+
+
+/*  COMIENZA LA PAGINA CURSOS */
+
+.dividirCursos{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto auto auto ;
+    grid-template-areas: 
+    "tituloCursos tituloCursos tituloCursos tituloCursos" 
+    "cursoCocinaAutor cursoCocinaAutor cursoCocinaAutor cursoCocinaAutor"
+    "otrosCursos otrosCursos otrosCursos otrosCursos"
+}
+
+.tituloCursos{ grid-area: tituloCursos;}
+
+.cursoCocinaAutor{ 
+    grid-area: cursoCocinaAutor;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    " tituloCurso1 tituloCurso2 tituloCurso3"
+    "tarjetaCurso1 tarjetaCurso2 tarjetaCurso3"
+}
+
+.tituloCurso1{ grid-area: tituloCurso1;}
+.tituloCurso2{ grid-area: tituloCurso2;}
+.tituloCurso3{ grid-area: tituloCurso3;}
+.tarjetaCurso1{ grid-area: tarjetaCurso1;}
+.tarjetaCurso2{ grid-area: tarjetaCurso2;}
+.tarjetaCurso3{ grid-area: tarjetaCurso3;}
+
+.cursoTitulo{
+    width: 85%;
+    margin: 0 auto;
+    background-color: rgb(248, 201, 157);
+    font-size: 10px;
+    color: rgb(28, 21, 76);
+    padding: 0.5rem 2rem;
+    text-align: center;
+    box-shadow: 2px 2px 2px gray;
+    border: 1px solid rgba(70, 69, 69, 0.568);
+    border-radius: 1rem;
+}
+.formaTarjeta{
+    margin: 0.5rem auto;
+    background-color: #fbffea;
+    text-align: center;
+    border: 2px solid rgba(75, 74, 74, 0.541);
+    border-radius: 1rem;
+    padding: 1rem 2rem 2rem ;
+    box-shadow: 3px 2px 6px 2px gray;
+}
+img.imgTarjeta{
+    width: 16rem;
+    border-radius: 2rem  2rem 0 0;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(128, 128, 128, 0.46);
+}
+.pieTarjeta{
+    border-top: 1rem solid rgba(92, 89, 89, 0.518);
+    color: brown;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1.3rem;
+}
+.nombreTarjeta{
+    font-size: 1.3rem;
+    text-align: left;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+}
+.leerMas{
+    font-size: 1.1rem;
+    text-align: right;
+    color: blue;
+    cursor: pointer;
+}
+
+
+.otrosCursos{ 
+    grid-area: otrosCursos;
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "tituloCurso4 tituloCurso5 tituloCurso6 tituloCurso7"
+    " tarjetaCurso4 tarjetaCurso5 tarjetaCurso6 tarjetaCurso7"
+    
+}
+.tituloCurso4{ grid-area: tituloCurso4;}
+.tituloCurso5{ grid-area: tituloCurso5;}
+.tituloCurso6{ grid-area: tituloCurso6;}
+.tituloCurso7{ grid-area: tituloCurso7;}
+.tarjetaCurso4{ grid-area: tarjetaCurso4;}
+.tarjetaCurso5{ grid-area: tarjetaCurso5;}
+.tarjetaCurso6{ grid-area: tarjetaCurso6;}
+.tarjetaCurso7{ grid-area: tarjetaCurso7;}
+
+/* Tarjeta Comida Mex */
+.comidaMex{ background-color: rgb(180, 243, 87);}
+.tarjetaMex{ background-color: rgb(243, 255, 206);}
+.pieMex{ color: rgb(104, 181, 31);}
+
+/* Tarjeta Curso Pastas */
+.comidaPastas{ background-color: rgb(248, 187, 248) ;}
+.tarjetaPastas{ background-color: rgb(250, 206, 250);}
+.piePastas{ color: rgb(107, 12, 107);}
+
+/* Tarjeta Comida Jap */
+.comidaJapon{ background-color: #f8b25e;}
+.tarjetaJapon{ background-color: #fedba6;}
+.pieJapon{ color: rgb(222, 61, 2);}
+
+/* Tarjeta Curso Postres */
+.comidaPostres{ background-color: #7db8ff;}
+.tarjetaPostres{ background-color: #c4defc;}
+.piePostres{ color: #013575;}
+
+
+
+
+/* COMIENZA LA PAGINA DE PLATOS */
+
+.dividirPlatos{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas: 
+    "tituloPlatos tituloPlatos tituloPlatos tituloPlatos"
+    "tituloAltaCocina tituloAltaCocina tituloAltaCocina tituloAltaCocina"
+    "tarjetasFilaUno tarjetasFilaUno tarjetasFilaUno tarjetasFilaUno"
+    "tituloPostres tituloPostres tituloPostres tituloPostres"
+    "tarjetasFilaDos tarjetasFilaDos tarjetasFilaDos tarjetasFilaDos"
+    "tituloTradicional tituloTradicional tituloTradicional tituloTradicional"
+    "tarjetasFilaTres  tarjetasFilaTres tarjetasFilaTres tarjetasFilaTres"
+}
+
+.tituloPlatos{grid-area: tituloPlatos;}
+
+.tituloAltaCocina{ grid-area: tituloAltaCocina;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.tarjetasFilaUno{ grid-area: tarjetasFilaUno;
+display: flex;
+flex-direction: row;
+justify-content: space-between ;}
+
+
+.tituloPostres{ grid-area: tituloPostres;}
+.tarjetasFilaDos{ grid-area: tarjetasFilaDos;}
+.tituloTradicional{ grid-area: tituloTradicional;}
+.tarjetasFilaTres{ grid-area: tarjetasFilaTres;}
+
+
+.tarjetaPlatos{
+    
+  
+}
