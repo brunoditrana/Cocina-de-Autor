@@ -224,16 +224,7 @@ img.img-publicidad{                       /* Pie de Pagina*/
    width: 3rem;
    margin-left: 0.5rem;
 }
-p.texto-redes{                                 /* Pie de Pagina*/ 
-    font-size: 23px;
-    margin-left: 35px;
 
-    margin-right: 1rem;
-    font-weight: bold;
-    color: #f4a545;
-    text-shadow: 1px 1px 1px  rgb(51, 50, 50);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
 .dividirLogo{                            /* Pie de Pagina*/
     display: flex;
     justify-content: center;
@@ -550,26 +541,68 @@ img.imgTarjeta{
     "tarjetasFilaTres  tarjetasFilaTres tarjetasFilaTres tarjetasFilaTres"
 }
 
-.tituloPlatos{grid-area: tituloPlatos;}
-
+.tituloPlatos{grid-area: tituloPlatos; }
+.tituloPlatos.titulo1{ border-color: #ffffff00;}
 .tituloAltaCocina{ grid-area: tituloAltaCocina;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    margin-top: 2rem;
+    font-family: 'Fredericka the Great', cursive;
 }
 
 .tarjetasFilaUno{ grid-area: tarjetasFilaUno;
 display: flex;
 flex-direction: row;
-justify-content: space-between ;}
+justify-content: space-evenly ;
+flex-wrap: wrap;}
 
 
 .tituloPostres{ grid-area: tituloPostres;}
-.tarjetasFilaDos{ grid-area: tarjetasFilaDos;}
+
+.tarjetasFilaDos{ grid-area: tarjetasFilaDos;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly ;
+    flex-wrap: wrap;}
+
 .tituloTradicional{ grid-area: tituloTradicional;}
-.tarjetasFilaTres{ grid-area: tarjetasFilaTres;}
+.tarjetasFilaTres{ grid-area: tarjetasFilaTres;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly ;
+    flex-wrap: wrap;}
+
 
 
 .tarjetaPlatos{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 75% 25%;
+    grid-template-areas: 
+    "imgPlatos"
+    "parrafoPlatos";
     
-  
+    width: 23%;
+    height: 23rem;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(134, 132, 131, 0.681);
+    border-radius: 0.2rem;
+   margin: 2rem 0;
+   box-shadow: 1px 2px 6px 2px grey;
+}
+.parrafoPlatos{
+    grid-area:parrafoPlatos ;
+    margin: 1.2rem   ;
+    text-align: center;
+    
+    
+    font-family: 'Bad Script', cursive;
+    
+}
+.imgPlatos{
+    grid-area: imgPlatos;
+    width: 100%;
+   
+    margin: auto;
+  height: 100%;
 }
