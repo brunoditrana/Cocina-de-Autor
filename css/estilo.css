@@ -15,7 +15,9 @@ html{
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    grid-template-areas: "header" "main" "footer" ;
+    grid-template-areas: "header" 
+    "main"
+     "footer" ;
    
     
 }
@@ -30,11 +32,11 @@ header{                  /* Encabezado*/
 }
 #contenedorHeader{                /* Encabezado GRID*/
     display: grid;
-    grid-template-columns: 10% 85%;
+    grid-template-columns: 10% 90%;
   
     grid-template-rows: auto;
     grid-template-areas: "imgLogo navHeader";
-   
+   justify-content: space-evenly;
 }
 .imgLogo{                       /* Encabezado GRID*/
     grid-area: imgLogo ;     
@@ -43,7 +45,8 @@ header{                  /* Encabezado*/
     width: 5rem;
     margin: 6px 0px 6px 20px;
 }
-.navHeader{                     /* Encabezado GRID*/
+.navHeader{ 
+    width: 110%;                    /* Encabezado GRID*/
     grid-area: navHeader;
     align-self: center;
 }
@@ -53,11 +56,12 @@ header{                  /* Encabezado*/
     flex-direction: row;
     flex-wrap: nowrap;
     list-style:none;     
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 ul li a{                         /* Encabezado GRID*/
-    width: 20%; 
+    width: 18%; 
 }
+
 a.cabecero-op{                 /* Encabezado Botones*/  
     background-color: #c6eff0;
     font-size: 20px;
@@ -107,7 +111,7 @@ main{
     font-family: 'Original Surfer', cursive;
    color: rgb(41, 39, 39);
    text-shadow: 4px 2px 3px  rgb(170, 165, 165);
-   background-color: rgba(197, 227, 227, 0.303);
+  
     
    width: auto;
    border-radius: 20px;
@@ -118,27 +122,32 @@ main{
 
 .contenedorImgMain{                   /* Imagenes Principal*/
     grid-area: contenedorImgMain;
-    max-width: 90%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 24%);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "imagenCentralImgUno imagenCentralImgDos imagenCentralImgTres imagenCentralImgCuatro" 
+    ;
+   justify-content: space-evenly;
+   margin-bottom: 7rem;
+}
+.imagenCentral.imgUno{  grid-area:imagenCentralImgUno ;}
+.imagenCentral.imgDos{ grid-area: imagenCentralImgDos;}
+.imagenCentral.imgTres{grid-area:imagenCentralImgTres ;}
+.imagenCentral.imgCuatro{grid-area: imagenCentralImgCuatro;}
 
-    margin:auto;
-    margin-bottom: 100px;
-}
-.imagenCentral{                   /* Imagenes Principal*/
-    width:21rem;
-    height:21rem;
-    overflow:hidden;
-}
-.imagen img{                        /* Imagenes Principal*/
-    width:95%;
-    height:19rem;
+.imagenCentral img{                         /* Imagenes Principal*/
+    width:22rem;
+   
+    height: 120%;
     opacity: 0.6;
     box-shadow: 1px 1px 1px 1px gray;
 }
-.imagen img:hover{                 /* Imagenes Principal*/
+img.imgIndex{
+    width: 99%;
+}
+img.imgIndex:hover{                 /* Imagenes Principal*/
  opacity: 1;
  box-shadow: 4px 1px 3px 1px gray;
 }
@@ -149,22 +158,25 @@ main{
 .contenedorVideoMain{                /* Video + Parrafo*/ 
     grid-area: contenedorVideoMain;   
     width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-   padding: 30px;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "dividir-videoLinea dividir-video";
+    padding: 1rem;
+  
 }
 .dividir-video{                   /* Video + Parrafo*/  
-    width: 50%;
-    
+    grid-area: dividir-video;
 }
 .dividir-video.linea{
+    grid-area: dividir-videoLinea;
     border-left: 4px solid rgb(255, 139, 56);
 }
 .videoYou{                           /* Video + Parrafo*/ 
-    width:560px; 
-    height:315px;
-    margin-left: 40px;
+    width:35rem; 
+    height:20rem;
+    margin-left: 5rem;
     
 }
 .titulo-cocina{                   /* Video + Parrafo*/ 
@@ -178,6 +190,7 @@ main{
     font-size: 28px;
     margin-top: 45px;
     padding: 50px;
+    flex-wrap: nowrap;
 }
 
 
@@ -329,7 +342,7 @@ textarea{
 .dividirInformacion{
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto ;
+    grid-template-rows: repeat(11, auto) ;
     grid-template-areas: 
     "tituloInformacion"
     "consigna1"
@@ -605,4 +618,149 @@ flex-wrap: wrap;}
    
     margin: auto;
   height: 100%;
+}
+
+@media only screen and (min-width: 481px){ 
+    .navMobile{display: none;}
+}
+
+
+
+@media only screen and (max-width:480px) {
+    
+   
+  /* COMIENZA MEDIA QUERIES PARA EL INDEX */  
+  
+  
+  #contenedorHeader{
+        min-width: 150%;
+     
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: auto;
+        grid-template-areas: "imgLogo navMobile";
+    }
+    .navHeader{display: none;}
+    .navMobile ul{
+        grid-area: navMobile;
+       display: flex;
+        flex-wrap: wrap;
+        list-style:none; 
+        
+    }
+    .menuMobile{
+        text-decoration: none;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        color: #353432;
+        font-size: 4rem;
+    }
+    
+    .tituloMain .titulo1{width: 140%; font-size: 8rem; margin-bottom: 1rem;}
+    
+   .contenedorImgMain{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: auto auto;
+   grid-template-areas: 
+   "imagenCentralImgUno imagenCentralImgDos"
+   "imagenCentralImgTres imagenCentralImgCuatro"
+   ;
+   min-width: 140%;
+  height: 100%;
+   }
+   .imagenCentral{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem 0.5rem;
+    padding: 0.2rem;
+   }
+   img.imgIndex{
+    width: 100%;
+   }
+.contenedorVideoMain{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "dividir-videoLinea"
+    "dividir-video";
+    margin-top: 5rem;
+    min-width: 110%;
+}
+.dividir-video.linea{
+    width: 120%;
+    margin: 0.5rem;   
+}
+.titulo-cocina{font-size: 4rem;}
+.parrafo-cocina{font-size: 2.5rem; padding-top: 0;}
+.videoYou{width: 120%;
+    margin: 1rem;
+    height:25rem;
+}
+footer{
+    min-width: 150%;
+}
+.contenedorFooter{
+    grid-template-columns: 40% 30% 40%;
+    
+
+
+}
+.dividirLogo{width: 50%;}
+.imgLogo{display: inline-block;}
+
+/* MEDIA QUERIES PAG CONTACTO */
+
+.dividirComentarios{
+    display: grid;
+    grid-template-columns:130%;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    "tituloContacto"
+    "formulario-contacto"
+    "imgFormulario"
+    ;
+    margin-left: 2rem;
+}
+.tituloContacto .titulo1{
+    grid-area:tituloContacto ;
+    font-size: 6.5rem;
+    margin: 3rem 0;
+}
+.formulario-contacto{
+    grid-area: formulario-contacto;
+    width: 100%;
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+}
+.imgFormulario{
+        grid-area:imgFormulario;
+}
+
+/* MEDIA QUERIES PAG INFORMACION */
+
+.dividirInformacion{
+    display: grid;
+    grid-template-columns: 130%;
+    margin-left: 6rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.consignaInfo{font-size: 2rem;
+
+}
+.parrafoInfo .textoParrafo{
+width: 100%;
+font-size: 1.5rem;
+
+}
+.textoParrafo{
+padding: 1rem 3rem;
+}
+
+
+
 }
