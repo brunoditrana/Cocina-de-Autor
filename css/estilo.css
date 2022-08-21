@@ -77,6 +77,20 @@ a.cabecero-op:hover{                   /* Encabezado Botones*/
     background-color: #fadaa3;
 }
 
+/* MENU MOBILE */
+.menuMobile span{
+    color: rgb(255, 248, 240);
+    background-color: #ec820a;
+    box-shadow: 3px 2px  3px  1px  rgb(170, 150, 135);
+    border-radius: 8px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    font-size: 5rem;
+    cursor: pointer;
+    display: none;
+}
+#check{ display: none;}
 
 
 /* COMIENZA MAIN*/
@@ -475,7 +489,7 @@ img.imgTarjeta{
     border: 1px solid rgba(128, 128, 128, 0.46);
 }
 .pieTarjeta{
-    border-top: 1rem solid rgba(92, 89, 89, 0.518);
+    border-top: 0.5rem solid rgba(112, 110, 110, 0.518);
     color: brown;
     font-size: 1.8rem;
     font-weight: bold;
@@ -620,43 +634,73 @@ flex-wrap: wrap;}
   height: 100%;
 }
 
-@media only screen and (min-width: 481px){ 
-    .navMobile{display: none;}
-}
+
 
 
 
 @media only screen and (max-width:480px) {
     
-   
-  /* COMIENZA MEDIA QUERIES PARA EL INDEX */  
-  
-  
-  #contenedorHeader{
-        min-width: 150%;
-     
-        display: grid;
-        grid-template-columns: 20% 80%;
-        grid-template-rows: auto;
-        grid-template-areas: "imgLogo navMobile";
-    }
-    .navHeader{display: none;}
-    .navMobile ul{
+  /* MENU MOBILE */
+ 
+    .menuMobile span{
+        display: block;
         grid-area: navMobile;
-       display: flex;
-        flex-wrap: wrap;
-        list-style:none; 
+       
+    }
+    ul{
+        position: fixed;
+        height: 100vh;
+        background-color: rgb(119, 64, 128);
+        width: 100%;
+        top: 90px;
+        left: -150%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{ font-size: 20px;}
+    li a:hover, li a.acive{
+        background: none;
+        color: blueviolet;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    .navHeader{width: 100%;}
+    .navHeader ul{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    
+        max-width: 100%;
+        height: 100%;
+        z-index: 1;
         
     }
-    .menuMobile{
-        text-decoration: none;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        color: #353432;
-        font-size: 4rem;
+    a.cabecero-op{
+        display: block;
+        font-size: 2rem;
+       background-color: #59d4df;
+       color: #fff;
+      width: 85%;
+      padding: 1rem;
     }
-    
+   
+    /* COMIENZA MEDIA QUERIES PARA EL INDEX */  
+  #contenedorHeader{
+        min-width: 140%;
+     
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-rows: auto;
+        
+       
+    }
     .tituloMain .titulo1{width: 140%; font-size: 8rem; margin-bottom: 1rem;}
     
    .contenedorImgMain{
@@ -761,6 +805,71 @@ font-size: 1.5rem;
 padding: 1rem 3rem;
 }
 
+/* MEDIA QUERIES PAG CURSOS*/
+
+.dividirCursos{
+    display: grid;
+    grid-template-columns:  125%;
+    grid-template-rows:  repeat(3, auto);
+    grid-template-areas: 
+    "tituloCursos"
+    "cursoCocinaAutor"
+    "otrosCursos";
+}
+.cursoCocinaAutor{
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    
+    "tarjetaCurso1 tituloCurso1"
+    "tarjetaCurso2 tituloCurso2"
+    "tarjetaCurso3 tituloCurso3"
+    ;
+}
+.otrosCursos{
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+    "tarjetaCurso4 tituloCurso4"
+    "tarjetaCurso5 tituloCurso5"
+    "tarjetaCurso6 tituloCurso6"
+    "tarjetaCurso7 tituloCurso7";
+}
+.tituloCursos .titulo1{ font-size: 7rem;}
+.cursoTitulo{
+    height: 9.5rem;
+   margin-top: 7rem;
+   font-size: 0.9rem;
+}
+.comidaJapon,.comidaMex, .comidaPastas, .comidaPostres { height: 5.5rem;}
 
 
+/* MEDIA QUERIES PAG PLATOS*/
+.dividirPlatos{
+    display: grid;
+    grid-template-columns: 130%;
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas:  
+    "tituloPlatos"
+    "tituloAltaCocina"
+    "tarjetasFilaUno"
+    "tituloPostres"
+    "tarjetasFilaDos"
+    "tituloTradicional"
+    "tarjetasFilaTres"
+    ;
+}
+.tarjetasFilaUno, .tarjetasFilaDos, .tarjetasFilaTres{
+    width: 110%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.tituloPlatos .titulo1{    font-size: 6rem;}
+.tarjetaPlatos{width: 40%; margin-bottom: 0.1rem; font-size: 0.8rem;}
+.tituloAltaCocina{margin-left: 3rem;}
+.parrafoPlatos{font-size: 1rem;}
 }
