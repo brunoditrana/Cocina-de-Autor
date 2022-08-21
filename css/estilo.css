@@ -25,7 +25,7 @@ html{
 
 header{                  /* Encabezado*/
     grid-area: header;
-    background-color: #fec451;
+    background-color: #f39779;
     border-bottom: 1px solid black;
     box-shadow: 1px 1px 3px 2px rgb(110, 109, 109);
   
@@ -41,7 +41,9 @@ header{                  /* Encabezado*/
 .imgLogo{                       /* Encabezado GRID*/
     grid-area: imgLogo ;     
 }
-.imgLogo img{                   /* Encabezado GRID*/
+.imgLogo img{ 
+    border: 2px solid rgba(96, 95, 95, 0.612); 
+    border-radius: 5rem;                 /* Encabezado GRID*/
     width: 5rem;
     margin: 6px 0px 6px 20px;
 }
@@ -63,18 +65,18 @@ ul li a{                         /* Encabezado GRID*/
 }
 
 a.cabecero-op{                 /* Encabezado Botones*/  
-    background-color: #c6eff0;
+    background-color: #fdd68d;
     font-size: 20px;
     font-family: 'Cormorant', serif;
     font-weight: 400;
     padding: 12px 60px;
-    border: 1px solid black;
+    border: 1.5px solid black;
     text-decoration: none;
     color: black;
     border-radius: 2px 8px 2px 8px;
 }
 a.cabecero-op:hover{                   /* Encabezado Botones*/
-    background-color: #fadaa3;
+    background-color: #fdeac7;
 }
 
 /* MENU MOBILE */
@@ -185,7 +187,7 @@ img.imgIndex:hover{                 /* Imagenes Principal*/
 }
 .dividir-video.linea{
     grid-area: dividir-videoLinea;
-    border-left: 4px solid rgb(255, 139, 56);
+    border-left: 4px solid #f6ba4c;
 }
 .videoYou{                           /* Video + Parrafo*/ 
     width:35rem; 
@@ -213,9 +215,10 @@ footer{
                  /* Pie de Pagina*/ 
     grid-area: footer;             
     
-    background-color: #83a6d2;
-    border-bottom: 1px solid black;
-    box-shadow: 1px 1px 3px 2px rgb(110, 109, 109);
+    background-color: #f39779;
+    border-top: 1px solid black;
+    box-shadow: 1px 1px 3px 2px rgb(130, 128, 128);
+  
     
 }
 .contenedorFooter{                   /* Pie de Pagina*/ 
@@ -244,8 +247,8 @@ img.img-publicidad{                       /* Pie de Pagina*/
   display: flex;
   justify-content: center;
   align-items: center;
-  border-left: 3px solid rgb(255, 139, 56);
-  border-right: 3px solid rgb(255, 139, 56);
+  border-left: 3px solid #fdd68d;
+  border-right: 3px solid #fdd68d;
 }
 .img-redes{                     /* Pie de Pagina*/ 
    width: 3rem;
@@ -640,8 +643,11 @@ flex-wrap: wrap;}
 
 @media only screen and (max-width:480px) {
     
+
+    
   /* MENU MOBILE */
  
+
     .menuMobile span{
         display: block;
         grid-area: navMobile;
@@ -650,7 +656,7 @@ flex-wrap: wrap;}
     ul{
         position: fixed;
         height: 100vh;
-        background-color: rgb(119, 64, 128);
+        background-color: #f39779;
         width: 100%;
         top: 90px;
         left: -150%;
@@ -665,7 +671,7 @@ flex-wrap: wrap;}
     nav ul li a{ font-size: 20px;}
     li a:hover, li a.acive{
         background: none;
-        color: blueviolet;
+        
     }
     #check:checked ~ ul{
         left: 0;
@@ -685,10 +691,13 @@ flex-wrap: wrap;}
     a.cabecero-op{
         display: block;
         font-size: 2rem;
-       background-color: #59d4df;
-       color: #fff;
+       background-color: #fdd68d;
+       
       width: 85%;
       padding: 1rem;
+    }
+    a.cabecero-op:hover{                   
+        background-color: #fdeac7;
     }
    
     /* COMIENZA MEDIA QUERIES PARA EL INDEX */  
