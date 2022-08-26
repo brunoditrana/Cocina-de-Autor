@@ -115,6 +115,7 @@ main{
 .tituloMain{
     grid-area: tituloMain;
     width: 100%;
+   
     display: grid;
     justify-content: center;
     align-content: center;
@@ -146,7 +147,7 @@ main{
     "imagenCentralImgUno imagenCentralImgDos imagenCentralImgTres imagenCentralImgCuatro" 
     ;
    justify-content: space-evenly;
-   margin-bottom: 7rem;
+   margin-bottom: 10rem;
 }
 .imagenCentral.imgUno{  grid-area:imagenCentralImgUno ;}
 .imagenCentral.imgDos{ grid-area: imagenCentralImgDos;}

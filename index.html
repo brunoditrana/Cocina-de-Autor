@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/estilo.css">
     <title>Cocina de Autor</title>
 </head>
 <body> 
-    
+     
     <div id="grilla">
         <header id="contenedorHeader">
     
@@ -41,8 +42,9 @@
             <h1 class="titulo1">Cocina de Autor</h1>   
             </div>
             
-            <div class="contenedorImgMain">
-                <div class="imagenCentral imgUno">
+            <div  class="contenedorImgMain">
+                
+                <div  class="imagenCentral imgUno">
                     <img class="imgIndex" src="img/imagen-central1.jpg" alt="imagen-central1">
                 </div>
                 <div class="imagenCentral imgDos">
@@ -60,13 +62,13 @@
         
             <div class="contenedorVideoMain">
                 
-                <div class="dividir-video linea">
+                <div data-aos="zoom-in-right" class="dividir-video linea">
                     <h2 class="titulo-cocina">¿Que es la Cocina de Autor?</h2>
                     <p class="parrafo-cocina">La cocina de autor se refiere a la cocina innovadora que se basa en la experiencia del propio chef, es decir,
                         la comida de autor tiene un estilo único y personal sin tener en cuenta las técnicas culinarias habituales. </p>
                 </div>
-                <div class="dividir-video">
-                    <iframe class="videoYou"src="https://www.youtube.com/embed/2gLQj-Us4GY" title="YouTube video player" frameborder="0"
+                <div   class="dividir-video">
+                    <iframe  class="videoYou"src="https://www.youtube.com/embed/2gLQj-Us4GY" title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
@@ -98,5 +100,9 @@
             
         </footer>
    </div> 
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script>
+    AOS.init();
+  </script>
 </body>
 </html>
