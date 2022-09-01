@@ -873,7 +873,7 @@ padding: 1rem 3rem;
 /* MEDIA QUERIES PAG PLATOS*/
 .dividirPlatos{
     display: grid;
-    grid-template-columns: 130%;
+    grid-template-columns: 100%;
     grid-template-rows: repeat(7, auto);
     grid-template-areas:  
     "tituloPlatos"
@@ -885,15 +885,38 @@ padding: 1rem 3rem;
     "tarjetasFilaTres"
     ;
 }
-.tarjetasFilaUno, .tarjetasFilaDos, .tarjetasFilaTres{
-    width: 110%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+.tarjetasFilaUno{
+    width: 100%;
+    display: grid;
+   grid-template-columns: 100%;
+   grid-template-rows: repeat(4, auto);
+   grid-template-areas: 
+   "tarjetaUno"
+   "tarjetaDos"
+   "tarjetaTres"
+   "tarjetaCuatro";
+}
+.tarjetasFilaDos{
+    width: 100%;
+    display: grid;
+   grid-template-columns: 100%;
+   grid-template-rows: repeat(4, auto);
    
 }
+.tarjetasFilaTres{
+    width: 100%;
+    display: grid;
+   grid-template-columns: 100%;
+   grid-template-rows: repeat(4, auto);
+   
+}
+.tarjetaPlatos{
+   margin: auto;
+    width: 60%;
+     margin-bottom: 1.5rem;
+      font-size:0.8rem;}
+
 .tituloPlatos .titulo1{    font-size: 6rem;}
-.tarjetaPlatos{width: 40%; margin-bottom: 0.1rem; font-size: 0.8rem;}
-.tituloAltaCocina{margin-left: 3rem;}
+.tituloAltaCocina{margin-bottom: 1rem;}
 .parrafoPlatos{font-size: 1rem;}
 }
