@@ -733,6 +733,7 @@ flex-wrap: wrap;}
     margin: 2rem 0.5rem;
     padding: 0.2rem;
    }
+   .imagenCentral img{ opacity: 1;}
    img.imgIndex{
     width: 100%;
    }
@@ -752,7 +753,10 @@ flex-wrap: wrap;}
     margin: 0.5rem;   
 }
 .titulo-cocina{font-size: 4rem;}
-.parrafo-cocina{font-size: 2.5rem; padding: 0; text-align: center;}
+.parrafo-cocina{font-size: 2.2rem; padding: 0;
+     text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+margin-bottom: 1rem;}
 .videoYou{    width: 26rem;
     margin: 1rem;
     
