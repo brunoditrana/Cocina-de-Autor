@@ -185,6 +185,7 @@ img.imgIndex:hover{                 /* Imagenes Principal*/
 }
 .dividir-video{                   /* Video + Parrafo*/  
     grid-area: dividir-video;
+  
 }
 .dividir-video.linea{
     grid-area: dividir-videoLinea;
@@ -667,8 +668,9 @@ flex-wrap: wrap;}
     }
     nav ul li{
         display: block;
-        margin: 50px 0;
+        margin: 20px 0;
         line-height: 30px;
+        
     }
     nav ul li a{ font-size: 20px;}
     li a:hover, li a.acive{
@@ -753,6 +755,11 @@ flex-wrap: wrap;}
     width: 100%;
     margin: 0.5rem;   
 }
+.dividir-video .videoYou{
+    display: flex;
+    margin: 0 auto;
+}
+
 .titulo-cocina{font-size: 3.5rem;}
 .parrafo-cocina{font-size: 2rem; padding: 0.5rem;
      text-align: center;
