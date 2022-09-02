@@ -25,7 +25,7 @@ html{
 
 header{                  /* Encabezado*/
     grid-area: header;
-    background-color: #f39779;
+    background-image: linear-gradient(to bottom, #121213, #1c1c1e, #262628, #303133, #3b3c3f);
     border-bottom: 1px solid black;
     box-shadow: 1px 1px 3px 2px rgb(110, 109, 109);
   
@@ -42,7 +42,7 @@ header{                  /* Encabezado*/
     grid-area: imgLogo ;     
 }
 .imgLogo img{ 
-    border: 2px solid rgba(96, 95, 95, 0.612); 
+   
     border-radius: 5rem;                 /* Encabezado GRID*/
     width: 5rem;
     margin: 6px 0px 6px 20px;
@@ -65,30 +65,33 @@ ul li a{                         /* Encabezado GRID*/
 }
 
 a.cabecero-op{                 /* Encabezado Botones*/  
-    background-color: #fdd68d;
+    background-color: #adacab;
     font-size: 20px;
-    font-family: 'Cormorant', serif;
-    font-weight: 400;
+    font-family: 'Original Surfer';
+   text-shadow: 1px 2px 2px rgb(4, 4, 4);
     padding: 12px 60px;
     border: 1.5px solid black;
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
     border-radius: 2px 8px 2px 8px;
 }
 a.cabecero-op:hover{                   /* Encabezado Botones*/
-    background-color: #fdeac7;
+    background-color: #d9d8d7;
+    
 }
 
 /* MENU MOBILE */
 .menuMobile span{
     color: rgb(255, 248, 240);
     background-color: #ec820a;
-    box-shadow: 3px 2px  3px  1px  rgb(170, 150, 135);
+    border: 1px solid rgb(124, 123, 123);
+    box-shadow: 2px 1px  1px  1px  rgb(162, 153, 153);
     border-radius: 8px;
     float: right;
-    line-height: 80px;
+    line-height: 58px;
+    width: 3.5rem;
     margin-right: 40px;
-    font-size: 5rem;
+    font-size: 3.5rem;
     cursor: pointer;
     display: none;
 }
@@ -217,8 +220,7 @@ img.imgIndex:hover{                 /* Imagenes Principal*/
 footer{  
                  /* Pie de Pagina*/ 
     grid-area: footer;             
-    
-    background-color: #f39779;
+    background-image: linear-gradient(to bottom, #494a4c, #3c3c3e, #2f2f30, #222223, #161617);
     border-top: 1px solid black;
     box-shadow: 1px 1px 3px 2px rgb(130, 128, 128);
   
@@ -659,20 +661,21 @@ flex-wrap: wrap;}
     ul{
         position: fixed;
         height: 100vh;
-        background-color: #f39779;
+        background-color: #ec820a;
         width: 100%;
         top: 90px;
         left: -150%;
         text-align: center;
         transition: all .5s;
+        border-bottom: 3px solid black;
     }
     nav ul li{
         display: block;
         margin: 20px 0;
-        line-height: 30px;
+        line-height: 15px;
         
     }
-    nav ul li a{ font-size: 20px;}
+    nav ul li a{ font-size: 15px;}
     li a:hover, li a.acive{
         background: none;
         
@@ -688,20 +691,20 @@ flex-wrap: wrap;}
         justify-content: flex-start;
     
         max-width: 100%;
-        height: 100%;
+        height: 75%;
         z-index: 1;
         
     }
     a.cabecero-op{
         display: block;
-        font-size: 2rem;
-       background-color: #fdd68d;
+        font-size: 1.5rem;
+       background-color: #bfbbb8;
        
       width: 85%;
       padding: 1rem;
     }
     a.cabecero-op:hover{                   
-        background-color: #fdeac7;
+        background-color: #d9d8d7;
     }
    
     /* COMIENZA MEDIA QUERIES PARA EL INDEX */  
@@ -757,7 +760,7 @@ flex-wrap: wrap;}
 }
 .dividir-video .videoYou{
     display: flex;
-    margin: 0 auto;
+    margin: 2rem auto;
 }
 
 .titulo-cocina{font-size: 3.5rem;}
