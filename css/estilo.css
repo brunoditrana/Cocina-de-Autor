@@ -831,6 +831,7 @@ input{
     text-align: center;
 }
 .consignaInfo{font-size: 2rem;
+    margin: 2rem 0 0 0;
 }
 .tituloInformacion .titulo1{
     font-size: 4.5rem;
