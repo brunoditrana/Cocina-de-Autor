@@ -401,19 +401,20 @@ textarea{
     font-size: 1.2rem;
     font-family: 'Original Surfer';
     font-weight: bold;
-    text-shadow: 1px 2px 2px rgb(165, 163, 163);
-    color: rgb(37, 47, 48);
+    text-shadow: 1px 2px 2px rgb(62, 62, 62);
+    color: rgb(251, 252, 252);
     display: grid;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    margin-left: 4rem;
+    margin: 3rem 0 .5rem 4rem;
 }
 .tituloConsigna{
     width: 100%;
-    background-color: #fbd6a8;
+    background-image: linear-gradient(to top, #c8882f, #e19121, #df901b, #ef9d1d, #ffa91e);
     border-radius: 6px;
     padding: 1rem 1.5rem;
     margin: 0.8rem auto;
-    border: 1px solid #5f5d5449;
+    border: 3px outset #c2bdbd;
     
 }
 
@@ -424,18 +425,17 @@ textarea{
     align-items: center;
 }
 .textoParrafo{
-    background-color: #bdd9fc;
+    background-color: #fffffff6;
     font-size: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Coming Soon', cursive;
     line-height:1.5rem ;
     text-indent:2rem;
     width: 90%;
     margin: 0 auto;
     padding: 1rem 4rem;
-    border-radius: 1rem;
-    border: 1px solid #54595f49;
+    border-radius: .5rem;
+    border: 3px outset #e0e0e1b2;
 }
-
 
 
 /*  COMIENZA LA PAGINA CURSOS */
