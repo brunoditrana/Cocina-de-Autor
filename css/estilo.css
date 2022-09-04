@@ -918,6 +918,7 @@ li.opcionesParrafo{
     width: 80%;
   padding: .6rem;
    font-size: 0.9rem;
+   margin-top: 3rem;
 }
 .tituloCurso1,.tituloCurso2,.tituloCurso3{
     background-image: linear-gradient(to top, #c8882f, #e19121, #df901b, #e69718, #f39f18);
