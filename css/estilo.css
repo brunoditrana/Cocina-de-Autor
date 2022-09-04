@@ -669,7 +669,7 @@ flex-wrap: wrap;}
     ul{
         position: fixed;
         height: 100vh;
-        background-color: #d7d6d6;
+        background-color: #ccc9c9;
         width: 100%;
         top: 90px;
         left: -150%;
@@ -712,7 +712,7 @@ flex-wrap: wrap;}
       padding: 1rem;
     }
     a.cabecero-op:hover{                   
-        background-color: #feaa5c;
+        background-color: #f2a45b;
     }
    
     /* COMIENZA MEDIA QUERIES PARA EL INDEX */  
