@@ -793,25 +793,28 @@ footer{
 
 .dividirComentarios{
     display: grid;
-    grid-template-columns:130%;
+    grid-template-columns:100%;
     grid-template-rows: repeat(3, auto);
     grid-template-areas: 
     "tituloContacto"
     "formulario-contacto"
     "imgFormulario"
     ;
-    margin-left: 2rem;
+   
 }
 .tituloContacto .titulo1{
     grid-area:tituloContacto ;
-    font-size: 6.5rem;
+    font-size: 5rem;
     margin: 3rem 0;
 }
 .formulario-contacto{
     grid-area: formulario-contacto;
-    width: 100%;
+    width: 90%;
     padding-top: 2rem;
     margin-bottom: 2rem;
+}
+input{
+    width: 90%;
 }
 .imgFormulario{
         grid-area:imgFormulario;
