@@ -1,0 +1,83 @@
+.dividirComentarios{
+    display: grid;
+    grid-template-columns: 55% 40%;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "tituloContacto tituloContacto"
+    "formulario imagenFormulario";
+
+}
+.imgFormulario{
+    grid-area:imagenFormulario ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.imgFormulario img{
+    
+    width: 88%;
+    border-radius: 5px;
+    border: 0.5rem outset rgb(246, 176, 110);
+    box-shadow: 3px 2px 4px  gray;
+    margin-top: 0.5rem;
+}
+.tituloContacto{
+    grid-area:tituloContacto ;
+}
+.tituloContacto .titulo1{
+   background-color: rgba(255, 255, 255, 0);
+   margin: 3rem;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+/*FORMULARIO*/
+
+.formulario-contacto{
+    grid-area: formulario;
+    width: 70%;
+    
+    border: 4px outset rgb(239, 180, 112);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto 1rem;
+    background: linear-gradient(  #f5c57e, #d3ac79 );
+    box-shadow: 4px 2px 5px 2px gray;
+    border-radius: 3px;
+}
+.contenedor-form{
+    margin: 1rem;
+    width: 90%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #353432;
+    text-shadow: 1px 1px 1px rgb(255, 238, 238);
+}
+input{
+    width: 70%;
+    padding: 10px;
+    margin-top: 10px auto;
+    border-radius: 5px;
+    border: 1px solid black;
+    
+}
+textarea{
+    width: 70%;
+    display: flex;
+    margin: 3px  auto;
+
+}
+.contenedor-form button{
+    padding: 13px;
+    font-size: 20px;
+    display: flex;
+    margin: auto;
+    cursor: pointer;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

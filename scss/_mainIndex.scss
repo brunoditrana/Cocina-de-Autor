@@ -1,0 +1,104 @@
+main{
+    grid-area: main;
+    max-width: 99%;
+    margin-bottom: 100px;
+}
+.tituloMain{
+    grid-area: tituloMain;
+    width: 100%;
+   
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    
+}
+.titulo1{                                  /*Titulo*/
+    text-align: center;
+    font-size: 75px;
+    margin: 60px 0;
+    font-family: 'Original Surfer', cursive;
+   color: rgb(41, 39, 39);
+   text-shadow: 4px 2px 3px  rgb(170, 165, 165);
+  
+    
+   width: auto;
+   border-radius: 20px;
+   padding: 10px;
+}
+
+
+
+.contenedorImgMain{                   /* Imagenes Principal*/
+    grid-area: contenedorImgMain;
+  margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 24%);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "imagenCentralImgUno imagenCentralImgDos imagenCentralImgTres imagenCentralImgCuatro" 
+    ;
+   justify-content: space-evenly;
+   margin-bottom: 12rem;
+}
+.imagenCentral.imgUno{  grid-area:imagenCentralImgUno ;}
+.imagenCentral.imgDos{ grid-area: imagenCentralImgDos;}
+.imagenCentral.imgTres{grid-area:imagenCentralImgTres ;}
+.imagenCentral.imgCuatro{grid-area: imagenCentralImgCuatro;}
+
+.imagenCentral img{                         /* Imagenes Principal*/
+    width:22rem;
+   
+    height: 120%;
+    opacity: 0.6;
+    box-shadow: 1px 1px 1px 1px gray;
+}
+img.imgIndex{
+    width: 99%;
+}
+img.imgIndex:hover{                 /* Imagenes Principal*/
+ opacity: 1;
+ box-shadow: 4px 1px 3px 1px gray;
+}
+
+
+
+
+.contenedorVideoMain{                /* Video + Parrafo*/ 
+    grid-area: contenedorVideoMain;   
+    width: 100%;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "dividir-videoLinea dividir-video";
+    padding: 1rem;
+  
+}
+.dividir-video{                   /* Video + Parrafo*/  
+    grid-area: dividir-video;
+  
+}
+.dividir-video.linea{
+    grid-area: dividir-videoLinea;
+    border-left: 4px solid #f6ba4c;
+}
+.videoYou{                           /* Video + Parrafo*/ 
+    width:35rem; 
+    height:20rem;
+    margin-left: 5rem;
+    
+}
+.titulo-cocina{                   /* Video + Parrafo*/ 
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-family: 'Original Surfer', cursive;
+    
+}
+.parrafo-cocina{                      /* Video + Parrafo*/ 
+    font-size: 28px;
+    margin-top: 45px;
+    padding: 50px;
+    flex-wrap: nowrap;
+    font-family:'Arima', cursive;
+}

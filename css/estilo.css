@@ -1,981 +1,825 @@
-*{
-    margin: 0;
-   box-sizing: border-box;
-   
-}
-html{ 
-    height: auto;
+* {
+  margin: 0;
+  box-sizing: border-box; }
 
-    overflow-x: hidden;
-    background-image: url(../img/fondoo3.png) ;
-    background-attachment: fixed;
-}
+html {
+  height: auto;
+  overflow-x: hidden;
+  background-image: url(../img/fondoo3.png);
+  background-attachment: fixed; }
 
-#grilla{
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-areas: "header" 
-    "main"
-     "footer" ;
-   
-    
-}
+#grilla {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas: "header"  "main" "footer"; }
 
+header {
+  grid-area: header;
+  background-image: linear-gradient(to bottom, #494a4c, #3c3c3e, #2f2f30, #222223, #161617);
+  border-bottom: 1px solid black;
+  box-shadow: 1px 1px 3px 2px #6e6d6d; }
 
-header{                  /* Encabezado*/
-    grid-area: header;
-    background-image: linear-gradient(to bottom, #121213, #1c1c1e, #262628, #303133, #3b3c3f);
-    border-bottom: 1px solid black;
-    box-shadow: 1px 1px 3px 2px rgb(110, 109, 109);
-  
-}
-#contenedorHeader{                /* Encabezado GRID*/
-    display: grid;
-    grid-template-columns: 10% 90%;
-  
-    grid-template-rows: auto;
-    grid-template-areas: "imgLogo navHeader";
-   justify-content: space-evenly;
-}
-.imgLogo{                       /* Encabezado GRID*/
-    grid-area: imgLogo ;     
-}
-.imgLogo img{ 
-   
-    border-radius: 5rem;                 /* Encabezado GRID*/
-    width: 5rem;
-    margin: 6px 0px 6px 20px;
-}
-.navHeader{ 
-    width: 110%;                    /* Encabezado GRID*/
+#contenedorHeader {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  grid-template-rows: auto;
+  grid-template-areas: "imgLogo navHeader";
+  justify-content: space-evenly; }
+  #contenedorHeader .imgLogo {
+    grid-area: imgLogo; }
+    #contenedorHeader .imgLogo img {
+      border-radius: 5rem;
+      width: 5rem;
+      margin: 6px 0px 6px 20px; }
+  #contenedorHeader .navHeader {
+    width: 100%;
     grid-area: navHeader;
-    align-self: center;
-}
-.navHeader ul{   
-    max-width: 90%;               /* Encabezado GRID*/
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    list-style:none;     
-    justify-content: space-evenly;
-}
-ul li a{                         /* Encabezado GRID*/
-    width: 18%; 
-}
-
-a.cabecero-op{                 /* Encabezado Botones*/  
-    background-color: #adacab;
-    font-size: 20px;
-    font-family: 'Original Surfer';
-   text-shadow: 1px 2px 2px rgb(4, 4, 4);
-    padding: 12px 60px;
-    border: 1.5px solid black;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    border-radius: 2px 8px 2px 8px;
-}
-a.cabecero-op:hover{                   /* Encabezado Botones*/
-    background-color: #d9d8d7;
-    
-}
+    align-self: center; }
+    #contenedorHeader .navHeader ul {
+      max-width: 80%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      list-style: none;
+      justify-content: space-evenly; }
+      #contenedorHeader .navHeader ul li a.cabecero-op {
+        background-color: #adacab;
+        font-size: 20px;
+        font-family: 'Original Surfer';
+        text-shadow: 1px 2px 2px #040404;
+        padding: 12px 60px;
+        border: 1.5px solid black;
+        text-decoration: none;
+        color: white;
+        border-radius: 2px 8px 2px 8px; }
+        #contenedorHeader .navHeader ul li a.cabecero-op:hover {
+          background-color: #d9d8d7; }
 
 /* MENU MOBILE */
-.menuMobile span{
-    color: rgb(255, 248, 240);
-    background-color: #ec820a;
-    border: 1px solid rgb(124, 123, 123);
-    box-shadow: 2px 1px  1px  1px  rgb(162, 153, 153);
-    border-radius: 8px;
-    float: right;
-    line-height: 58px;
-    width: 3.5rem;
-    margin-right: 40px;
-    font-size: 3.5rem;
-    cursor: pointer;
-    display: none;
-}
-#check{ display: none;}
+.menuMobile span {
+  color: #fff8f0;
+  background-color: #ec820a;
+  border: 1px solid #7c7b7b;
+  box-shadow: 2px 1px 1px 1px #a29999;
+  border-radius: 8px;
+  float: right;
+  line-height: 58px;
+  width: 3.5rem;
+  margin-right: 40px;
+  font-size: 3.5rem;
+  cursor: pointer;
+  display: none; }
 
+#check {
+  display: none; }
 
-/* COMIENZA MAIN*/
+footer {
+  grid-area: footer;
+  background-image: linear-gradient(to bottom, #494a4c, #3c3c3e, #2f2f30, #222223, #161617);
+  border-top: 1px solid black;
+  box-shadow: 1px 1px 3px 2px #828080; }
 
-#contenedorMain{
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto;
-    grid-template-areas: 
-     "tituloMain" 
-     "contenedorImgMain"  
-     "contenedorVideoMain"
-}
-
-main{
-    grid-area: main;
-    max-width: 99%;
-    margin-bottom: 100px;
-}
-.tituloMain{
-    grid-area: tituloMain;
+.contenedorFooter {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 30% 50% 20%;
+  grid-template-areas: "dividirMarcas dividirRedes dividirLogo"; }
+  .contenedorFooter .dividirMarcas {
+    grid-area: dividirMarcas;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; }
+    .contenedorFooter .dividirMarcas img.img-publicidad {
+      width: 5rem;
+      height: 2.5rem; }
+  .contenedorFooter .dividirRedes {
+    grid-area: dividirRedes;
     width: 100%;
-   
-    display: grid;
+    display: flex;
     justify-content: center;
-    align-content: center;
-    
-}
-.titulo1{                                  /*Titulo*/
-    text-align: center;
-    font-size: 75px;
-    margin: 60px 0;
-    font-family: 'Original Surfer', cursive;
-   color: rgb(41, 39, 39);
-   text-shadow: 4px 2px 3px  rgb(170, 165, 165);
-  
-    
-   width: auto;
-   border-radius: 20px;
-   padding: 10px;
-}
+    align-items: center;
+    border-left: 3px solid #fdd68d;
+    border-right: 3px solid #fdd68d; }
+    .contenedorFooter .dividirRedes img.img-redes {
+      width: 3rem;
+      margin-left: 0.5rem; }
+  .contenedorFooter .dividirLogo {
+    grid-area: dividirLogo;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .contenedorFooter .dividirLogo .imgLogo img.iconoLogo {
+      border-radius: 5rem;
+      width: 5rem;
+      margin: 6px 0px 6px 20px; }
 
+main {
+  grid-area: main;
+  max-width: 99%;
+  margin-bottom: 100px; }
 
+.tituloMain {
+  grid-area: tituloMain;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-content: center; }
 
-.contenedorImgMain{                   /* Imagenes Principal*/
-    grid-area: contenedorImgMain;
+.titulo1 {
+  /*Titulo*/
+  text-align: center;
+  font-size: 75px;
+  margin: 60px 0;
+  font-family: 'Original Surfer', cursive;
+  color: #292727;
+  text-shadow: 4px 2px 3px #aaa5a5;
+  width: auto;
+  border-radius: 20px;
+  padding: 10px; }
+
+.contenedorImgMain {
+  /* Imagenes Principal*/
+  grid-area: contenedorImgMain;
   margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 24%);
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "imagenCentralImgUno imagenCentralImgDos imagenCentralImgTres imagenCentralImgCuatro" 
-    ;
-   justify-content: space-evenly;
-   margin-bottom: 12rem;
-}
-.imagenCentral.imgUno{  grid-area:imagenCentralImgUno ;}
-.imagenCentral.imgDos{ grid-area: imagenCentralImgDos;}
-.imagenCentral.imgTres{grid-area:imagenCentralImgTres ;}
-.imagenCentral.imgCuatro{grid-area: imagenCentralImgCuatro;}
+  display: grid;
+  grid-template-columns: repeat(4, 24%);
+  grid-template-rows: auto;
+  grid-template-areas: "imagenCentralImgUno imagenCentralImgDos imagenCentralImgTres imagenCentralImgCuatro";
+  justify-content: space-evenly;
+  margin-bottom: 12rem; }
 
-.imagenCentral img{                         /* Imagenes Principal*/
-    width:22rem;
-   
-    height: 120%;
-    opacity: 0.6;
-    box-shadow: 1px 1px 1px 1px gray;
-}
-img.imgIndex{
-    width: 99%;
-}
-img.imgIndex:hover{                 /* Imagenes Principal*/
- opacity: 1;
- box-shadow: 4px 1px 3px 1px gray;
-}
+.imagenCentral.imgUno {
+  grid-area: imagenCentralImgUno; }
 
+.imagenCentral.imgDos {
+  grid-area: imagenCentralImgDos; }
 
+.imagenCentral.imgTres {
+  grid-area: imagenCentralImgTres; }
 
+.imagenCentral.imgCuatro {
+  grid-area: imagenCentralImgCuatro; }
 
-.contenedorVideoMain{                /* Video + Parrafo*/ 
-    grid-area: contenedorVideoMain;   
-    width: 100%;
-    display: grid;
-    grid-template-columns: 55% 45%;
-    grid-template-columns: auto;
-    grid-template-areas: 
-    "dividir-videoLinea dividir-video";
-    padding: 1rem;
-  
-}
-.dividir-video{                   /* Video + Parrafo*/  
-    grid-area: dividir-video;
-  
-}
-.dividir-video.linea{
-    grid-area: dividir-videoLinea;
-    border-left: 4px solid #f6ba4c;
-}
-.videoYou{                           /* Video + Parrafo*/ 
-    width:35rem; 
-    height:20rem;
-    margin-left: 5rem;
-    
-}
-.titulo-cocina{                   /* Video + Parrafo*/ 
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: 20px;
-    font-family: 'Original Surfer', cursive;
-    
-}
-.parrafo-cocina{                      /* Video + Parrafo*/ 
-    font-size: 28px;
-    margin-top: 45px;
-    padding: 50px;
-    flex-wrap: nowrap;
-    font-family:'Arima', cursive;
-}
+.imagenCentral img {
+  /* Imagenes Principal*/
+  width: 22rem;
+  height: 120%;
+  opacity: 0.6;
+  box-shadow: 1px 1px 1px 1px gray; }
 
+img.imgIndex {
+  width: 99%; }
 
+img.imgIndex:hover {
+  /* Imagenes Principal*/
+  opacity: 1;
+  box-shadow: 4px 1px 3px 1px gray; }
 
-footer{  
-                 /* Pie de Pagina*/ 
-    grid-area: footer;             
-    background-image: linear-gradient(to bottom, #494a4c, #3c3c3e, #2f2f30, #222223, #161617);
-    border-top: 1px solid black;
-    box-shadow: 1px 1px 3px 2px rgb(130, 128, 128);
-  
-    
-}
-.contenedorFooter{                   /* Pie de Pagina*/ 
-    display:grid;
-    grid-template-columns: 30% 50% 20%;
-    grid-template-rows: auto; 
-    grid-template-areas: "divirMarcas" "dividirRedes" "dividirLogo";
-    
-}
-.divirMarcas{                      /* Pie de Pagina*/ 
+.contenedorVideoMain {
+  /* Video + Parrafo*/
+  grid-area: contenedorVideoMain;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  grid-template-columns: auto;
+  grid-template-areas: "dividir-videoLinea dividir-video";
+  padding: 1rem; }
+
+.dividir-video {
+  /* Video + Parrafo*/
+  grid-area: dividir-video; }
+
+.dividir-video.linea {
+  grid-area: dividir-videoLinea;
+  border-left: 4px solid #f6ba4c; }
+
+.videoYou {
+  /* Video + Parrafo*/
+  width: 35rem;
+  height: 20rem;
+  margin-left: 5rem; }
+
+.titulo-cocina {
+  /* Video + Parrafo*/
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-family: 'Original Surfer', cursive; }
+
+.parrafo-cocina {
+  /* Video + Parrafo*/
+  font-size: 28px;
+  margin-top: 45px;
+  padding: 50px;
+  flex-wrap: nowrap;
+  font-family: 'Arima', cursive; }
+
+.dividirComentarios {
+  display: grid;
+  grid-template-columns: 55% 40%;
+  grid-template-rows: auto auto;
+  grid-template-areas: "tituloContacto tituloContacto" "formulario imagenFormulario"; }
+
+.imgFormulario {
+  grid-area: imagenFormulario;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+
+.imgFormulario img {
+  width: 88%;
+  border-radius: 5px;
+  border: 0.5rem outset #f6b06e;
+  box-shadow: 3px 2px 4px  gray;
+  margin-top: 0.5rem; }
+
+.tituloContacto {
+  grid-area: tituloContacto; }
+
+.tituloContacto .titulo1 {
+  background-color: rgba(255, 255, 255, 0);
+  margin: 3rem;
   width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
- margin-bottom: 20px;
-}
-img.img-publicidad{                       /* Pie de Pagina*/ 
-    width: 80px;
-    height: 50px;
-    margin-top: 30px;
-    margin-left: 10px;
-   
-}
-.dividirRedes{                            /* Pie de Pagina*/ 
-    width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-left: 3px solid #fdd68d;
-  border-right: 3px solid #fdd68d;
-}
-.img-redes{                     /* Pie de Pagina*/ 
-   width: 3rem;
-   margin-left: 0.5rem;
-}
+  justify-content: center; }
 
-.dividirLogo{                            /* Pie de Pagina*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
- 
-}
-
-
-
-/*PAGINA CONTACTOS*/
-
-
-
-.dividirComentarios{
-    display: grid;
-    grid-template-columns: 55% 40%;
-    grid-template-rows: auto auto;
-    grid-template-areas: 
-    "tituloContacto tituloContacto"
-    "formulario imagenFormulario";
-
-}
-.imgFormulario{
-    grid-area:imagenFormulario ;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    
-}
-.imgFormulario img{
-    
-    width: 88%;
-    border-radius: 5px;
-    border: 0.5rem outset rgb(246, 176, 110);
-    box-shadow: 3px 2px 4px  gray;
-    margin-top: 0.5rem;
-}
-.tituloContacto{
-    grid-area:tituloContacto ;
-}
-.tituloContacto .titulo1{
-   background-color: rgba(255, 255, 255, 0);
-   margin: 3rem;
-   width: 100%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-}
 /*FORMULARIO*/
+.formulario-contacto {
+  grid-area: formulario;
+  width: 70%;
+  border: 4px outset #efb470;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto 1rem;
+  background: linear-gradient(#f5c57e, #d3ac79);
+  box-shadow: 4px 2px 5px 2px gray;
+  border-radius: 3px; }
 
-.formulario-contacto{
-    grid-area: formulario;
-    width: 70%;
-    
-    border: 4px outset rgb(239, 180, 112);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem auto 1rem;
-    background: linear-gradient(  #f5c57e, #d3ac79 );
-    box-shadow: 4px 2px 5px 2px gray;
-    border-radius: 3px;
-}
-.contenedor-form{
-    margin: 1rem;
-    width: 90%;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 600;
-    font-size: 18px;
-    color: #353432;
-    text-shadow: 1px 1px 1px rgb(255, 238, 238);
-}
-input{
-    width: 70%;
-    padding: 10px;
-    margin-top: 10px auto;
-    border-radius: 5px;
-    border: 1px solid black;
-    
-}
-textarea{
-    width: 70%;
-    display: flex;
-    margin: 3px  auto;
+.contenedor-form {
+  margin: 1rem;
+  width: 90%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #353432;
+  text-shadow: 1px 1px 1px #ffeeee; }
 
-}
-.contenedor-form button{
-    padding: 13px;
-    font-size: 20px;
-    display: flex;
-    margin: auto;
-    cursor: pointer;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
+input {
+  width: 70%;
+  padding: 10px;
+  margin-top: 10px auto;
+  border-radius: 5px;
+  border: 1px solid black; }
 
+textarea {
+  width: 70%;
+  display: flex;
+  margin: 3px  auto; }
 
+.contenedor-form button {
+  padding: 13px;
+  font-size: 20px;
+  display: flex;
+  margin: auto;
+  cursor: pointer;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; }
 
-/*Pagina  INFORMACION*/
+.dividirPlatos {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(7, auto);
+  grid-template-areas: "tituloPlatos tituloPlatos tituloPlatos tituloPlatos" "tituloAltaCocina tituloAltaCocina tituloAltaCocina tituloAltaCocina" "tarjetasFilaUno tarjetasFilaUno tarjetasFilaUno tarjetasFilaUno" "tituloPostres tituloPostres tituloPostres tituloPostres" "tarjetasFilaDos tarjetasFilaDos tarjetasFilaDos tarjetasFilaDos" "tituloTradicional tituloTradicional tituloTradicional tituloTradicional" "tarjetasFilaTres  tarjetasFilaTres tarjetasFilaTres tarjetasFilaTres"; }
 
-.dividirInformacion{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(11, auto) ;
-    grid-template-areas: 
-    "tituloInformacion"
-    "consigna1"
-    "parrafo1"
-    "consigna2"
-    "parrafo2"
-    "consigna3"
-    "parrafo3"
-    "consigna4"
-    "parrafo4"
-    "consigna5"
-    "parrafo5"
-    ;
-}
-.tituloInformacion{ grid-area:tituloInformacion ;}
-.consignaInfo.laUno{ grid-area: consigna1;}
-.parrafoInfo.elUno{ grid-area:parrafo1 ;}
-.consignaInfo.laDos{ grid-area:consigna2 ;}
-.parrafoInfo.elDos{ grid-area:parrafo2 ;}
-.consignaInfo.laTres{ grid-area:consigna3 ;}
-.parrafoInfo.elTres{ grid-area:parrafo3 ;}
-.consignaInfo.laCuatro{ grid-area:consigna4 ;}
-.parrafoInfo.elCuatro{ grid-area:parrafo4 ;}
-.consignaInfo.laCinco{ grid-area:consigna5 ;}
-.parrafoInfo.elCinco{ grid-area:parrafo5 ;}
+.tituloPlatos {
+  grid-area: tituloPlatos; }
 
-.dividirInformacion{
-    width: 100%;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-}
-.consignaInfo{
-    font-size: 1.2rem;
-    font-family: 'Original Surfer';
-    font-weight: bold;
-    text-shadow: 1px 2px 2px rgb(62, 62, 62);
-    color: rgb(251, 252, 252);
-    display: grid;
-    justify-content: left;
-    margin-left: 4rem;
-    margin: 3rem 0 .5rem 4rem;
-}
-.tituloConsigna{
-    width: 100%;
-    background-image: linear-gradient(to top, #c8882f, #e19121, #df901b, #e69718, #f39f18);
-    border-radius: 6px;
-   
-    padding: 1rem 1.5rem;
-    margin: 0.8rem auto;
-    border: 3px outset #c2bdbd;
-    
-}
+.tituloPlatos.titulo1 {
+  border-color: #ffffff00; }
 
+.tituloAltaCocina {
+  grid-area: tituloAltaCocina;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 2rem;
+  font-family: 'Fredericka the Great', cursive; }
 
-.parrafoInfo{
-    width: 100%;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-}
-.textoParrafo{
-    background-color: #fffffff6;
-    font-size: 20px;
-    font-family: 'Coming Soon', cursive;
-    line-height:1.5rem ;
-    text-indent:2rem;
-    width: 90%;
-    margin: 0 auto;
-    padding: 1rem 4rem;
-    border-radius: .5rem;
-    border: 3px outset #e0e0e1b2;
-}
+.tarjetasFilaUno {
+  grid-area: tarjetasFilaUno;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap; }
 
+.tituloPostres {
+  grid-area: tituloPostres; }
 
-/*  COMIENZA LA PAGINA CURSOS */
+.tarjetasFilaDos {
+  grid-area: tarjetasFilaDos;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap; }
 
-.dividirCursos{
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: auto auto auto ;
-    grid-template-areas: 
-    "tituloCursos tituloCursos tituloCursos tituloCursos" 
-    "cursoCocinaAutor cursoCocinaAutor cursoCocinaAutor cursoCocinaAutor"
-    "otrosCursos otrosCursos otrosCursos otrosCursos"
-}
+.tituloTradicional {
+  grid-area: tituloTradicional; }
 
-.tituloCursos{ grid-area: tituloCursos;}
+.tarjetasFilaTres {
+  grid-area: tarjetasFilaTres;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap; }
 
-.cursoCocinaAutor{ 
-    grid-area: cursoCocinaAutor;
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: auto auto;
-    grid-template-areas: 
-    " tituloCurso1 tituloCurso2 tituloCurso3"
-    "tarjetaCurso1 tarjetaCurso2 tarjetaCurso3"
-}
+.tarjetaPlatos {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 75% 25%;
+  grid-template-areas: "imgPlatos" "parrafoPlatos";
+  width: 23%;
+  height: 23rem;
+  background-color: white;
+  border: 1px solid rgba(134, 132, 131, 0.681);
+  border-radius: 0.2rem;
+  margin: 2rem 0;
+  box-shadow: 1px 2px 6px 2px grey; }
 
-.tituloCurso1{ grid-area: tituloCurso1;}
-.tituloCurso2{ grid-area: tituloCurso2;}
-.tituloCurso3{ grid-area: tituloCurso3;}
-.tarjetaCurso1{ grid-area: tarjetaCurso1;}
-.tarjetaCurso2{ grid-area: tarjetaCurso2;}
-.tarjetaCurso3{ grid-area: tarjetaCurso3;}
+.parrafoPlatos {
+  grid-area: parrafoPlatos;
+  margin: 1.2rem;
+  text-align: center;
+  font-family: 'Bad Script', cursive; }
 
-.tituloCurso1,.tituloCurso2,.tituloCurso3{
-    background-image: linear-gradient(to top, #df9633, #e79d33, #efa333, #f7aa33, #ffb133);}
-.cursoTitulo{
-    width: 65%;
-    text-shadow: 1px 1px 1px rgb(52, 51, 51);
-    margin: 0 auto;
-    background-color: rgb(224, 224, 224);
-    font-size: 10px;
-    color: rgb(255, 255, 255);
-    padding: 0.5rem 2rem;
-    text-align: center;
-    
-    box-shadow: 2px 2px 2px gray;
-    border: 1px solid rgba(70, 69, 69, 0.568);
-    border-radius: 1rem;
-}
-.formaTarjeta{
-    margin: 0.5rem auto;
-    background-color: #ffffff;
-    text-align: center;
-    border: 2px solid rgba(75, 74, 74, 0.541);
-    border-radius: 1rem;
-    padding: 1rem 2rem 2rem ;
-    box-shadow: 3px 2px 6px 2px rgb(110, 109, 109);
-}
-img.imgTarjeta{
-    width: 16rem;
-    border-radius: 2rem  2rem 0 0;
-    margin-bottom: .2rem;
-    border: 1px solid rgba(128, 128, 128, 0.46);
-}
-.pieTarjeta{
-    border-top: 0.5rem solid rgb(100, 100, 100);
-   padding-top: 1.5rem;
-    color: rgb(237, 112, 4);
-    text-shadow: 1px 1px 1px rgb(119, 113, 113);
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
-.nombreTarjeta{
-    font-size: 1.3rem;
-    text-align: left;
-    font-weight: 800;
-    margin-bottom: 1.5rem;
-}
-.leerMas{
-    font-size: 1.1rem;
-    text-align: right;
-    color: blue;
-    cursor: pointer;
-}
+.imgPlatos {
+  grid-area: imgPlatos;
+  width: 100%;
+  margin: auto;
+  height: 100%; }
 
+.dividirInformacion {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(11, auto);
+  grid-template-areas: "tituloInformacion" "consigna1" "parrafo1" "consigna2" "parrafo2" "consigna3" "parrafo3" "consigna4" "parrafo4" "consigna5" "parrafo5"; }
 
-.otrosCursos{ 
-    grid-area: otrosCursos;
-    margin-top: 5rem;
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: auto auto;
-    grid-template-areas: 
-    "tituloCurso4 tituloCurso5 tituloCurso6 tituloCurso7"
-    " tarjetaCurso4 tarjetaCurso5 tarjetaCurso6 tarjetaCurso7"
-    
-}
-.tituloCurso4{ grid-area: tituloCurso4;}
-.tituloCurso5{ grid-area: tituloCurso5;}
-.tituloCurso6{ grid-area: tituloCurso6;}
-.tituloCurso7{ grid-area: tituloCurso7;}
-.tarjetaCurso4{ grid-area: tarjetaCurso4;}
-.tarjetaCurso5{ grid-area: tarjetaCurso5;}
-.tarjetaCurso6{ grid-area: tarjetaCurso6;}
-.tarjetaCurso7{ grid-area: tarjetaCurso7;}
+.tituloInformacion {
+  grid-area: tituloInformacion; }
+
+.consignaInfo.laUno {
+  grid-area: consigna1; }
+
+.parrafoInfo.elUno {
+  grid-area: parrafo1; }
+
+.consignaInfo.laDos {
+  grid-area: consigna2; }
+
+.parrafoInfo.elDos {
+  grid-area: parrafo2; }
+
+.consignaInfo.laTres {
+  grid-area: consigna3; }
+
+.parrafoInfo.elTres {
+  grid-area: parrafo3; }
+
+.consignaInfo.laCuatro {
+  grid-area: consigna4; }
+
+.parrafoInfo.elCuatro {
+  grid-area: parrafo4; }
+
+.consignaInfo.laCinco {
+  grid-area: consigna5; }
+
+.parrafoInfo.elCinco {
+  grid-area: parrafo5; }
+
+.dividirInformacion {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center; }
+
+.consignaInfo {
+  font-size: 1.2rem;
+  font-family: 'Original Surfer';
+  font-weight: bold;
+  text-shadow: 1px 2px 2px #3e3e3e;
+  color: #fbfcfc;
+  display: grid;
+  justify-content: left;
+  margin-left: 4rem;
+  margin: 3rem 0 .5rem 4rem; }
+
+.tituloConsigna {
+  width: 100%;
+  background-image: linear-gradient(to top, #c8882f, #e19121, #df901b, #e69718, #f39f18);
+  border-radius: 6px;
+  padding: 1rem 1.5rem;
+  margin: 0.8rem auto;
+  border: 3px outset #c2bdbd; }
+
+.parrafoInfo {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center; }
+
+.textoParrafo {
+  background-color: #fffffff6;
+  font-size: 20px;
+  font-family: 'Coming Soon', cursive;
+  line-height: 1.5rem;
+  text-indent: 2rem;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem 4rem;
+  border-radius: .5rem;
+  border: 3px outset #e0e0e1b2; }
+
+.dividirCursos {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "tituloCursos tituloCursos tituloCursos tituloCursos"  "cursoCocinaAutor cursoCocinaAutor cursoCocinaAutor cursoCocinaAutor" "otrosCursos otrosCursos otrosCursos otrosCursos"; }
+
+.tituloCursos {
+  grid-area: tituloCursos; }
+
+.cursoCocinaAutor {
+  grid-area: cursoCocinaAutor;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: auto auto;
+  grid-template-areas: " tituloCurso1 tituloCurso2 tituloCurso3" "tarjetaCurso1 tarjetaCurso2 tarjetaCurso3"; }
+
+.tituloCurso1 {
+  grid-area: tituloCurso1; }
+
+.tituloCurso2 {
+  grid-area: tituloCurso2; }
+
+.tituloCurso3 {
+  grid-area: tituloCurso3; }
+
+.tarjetaCurso1 {
+  grid-area: tarjetaCurso1; }
+
+.tarjetaCurso2 {
+  grid-area: tarjetaCurso2; }
+
+.tarjetaCurso3 {
+  grid-area: tarjetaCurso3; }
+
+.tituloCurso1, .tituloCurso2, .tituloCurso3 {
+  background-image: linear-gradient(to top, #df9633, #e79d33, #efa333, #f7aa33, #ffb133); }
+
+.cursoTitulo {
+  width: 65%;
+  text-shadow: 1px 1px 1px #343333;
+  margin: 0 auto;
+  background-color: #e0e0e0;
+  font-size: 10px;
+  color: white;
+  padding: 0.5rem 2rem;
+  text-align: center;
+  box-shadow: 2px 2px 2px gray;
+  border: 1px solid rgba(70, 69, 69, 0.568);
+  border-radius: 1rem; }
+
+.formaTarjeta {
+  margin: 0.5rem auto;
+  background-color: #ffffff;
+  text-align: center;
+  border: 2px solid rgba(75, 74, 74, 0.541);
+  border-radius: 1rem;
+  padding: 1rem 2rem 2rem;
+  box-shadow: 3px 2px 6px 2px #6e6d6d; }
+
+img.imgTarjeta {
+  width: 16rem;
+  border-radius: 2rem  2rem 0 0;
+  margin-bottom: .2rem;
+  border: 1px solid rgba(128, 128, 128, 0.46); }
+
+.pieTarjeta {
+  border-top: 0.5rem solid #646464;
+  padding-top: 1.5rem;
+  color: #ed7004;
+  text-shadow: 1px 1px 1px #777171;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem; }
+
+.nombreTarjeta {
+  font-size: 1.3rem;
+  text-align: left;
+  font-weight: 800;
+  margin-bottom: 1.5rem; }
+
+.leerMas {
+  font-size: 1.1rem;
+  text-align: right;
+  color: blue;
+  cursor: pointer; }
+
+.otrosCursos {
+  grid-area: otrosCursos;
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto auto;
+  grid-template-areas: "tituloCurso4 tituloCurso5 tituloCurso6 tituloCurso7" " tarjetaCurso4 tarjetaCurso5 tarjetaCurso6 tarjetaCurso7"; }
+
+.tituloCurso4 {
+  grid-area: tituloCurso4; }
+
+.tituloCurso5 {
+  grid-area: tituloCurso5; }
+
+.tituloCurso6 {
+  grid-area: tituloCurso6; }
+
+.tituloCurso7 {
+  grid-area: tituloCurso7; }
+
+.tarjetaCurso4 {
+  grid-area: tarjetaCurso4; }
+
+.tarjetaCurso5 {
+  grid-area: tarjetaCurso5; }
+
+.tarjetaCurso6 {
+  grid-area: tarjetaCurso6; }
+
+.tarjetaCurso7 {
+  grid-area: tarjetaCurso7; }
 
 /* Tarjeta Comida Mex */
-.comidaMex{ background-color: rgb(180, 243, 87);}
-.tarjetaMex{ background-color: rgb(243, 255, 206);}
-.pieMex{ color: rgb(104, 181, 31);}
+.comidaMex {
+  background-color: #b4f357; }
+
+.tarjetaMex {
+  background-color: #f3ffce; }
+
+.pieMex {
+  color: #68b51f; }
 
 /* Tarjeta Curso Pastas */
-.comidaPastas{ background-color: rgb(248, 187, 248) ;}
-.tarjetaPastas{ background-color: rgb(250, 206, 250);}
-.piePastas{ color: rgb(107, 12, 107);}
+.comidaPastas {
+  background-color: #f8bbf8; }
+
+.tarjetaPastas {
+  background-color: #facefa; }
+
+.piePastas {
+  color: #6b0c6b; }
 
 /* Tarjeta Comida Jap */
-.comidaJapon{ background-color: #f8b25e;}
-.tarjetaJapon{ background-color: #fedba6;}
-.pieJapon{ color: rgb(222, 61, 2);}
+.comidaJapon {
+  background-color: #f8b25e; }
+
+.tarjetaJapon {
+  background-color: #fedba6; }
+
+.pieJapon {
+  color: #de3d02; }
 
 /* Tarjeta Curso Postres */
-.comidaPostres{ background-color: #7db8ff;}
-.tarjetaPostres{ background-color: #c4defc;}
-.piePostres{ color: #013575;}
+.comidaPostres {
+  background-color: #7db8ff; }
 
+.tarjetaPostres {
+  background-color: #c4defc; }
 
+.piePostres {
+  color: #013575; }
 
-
-/* COMIENZA LA PAGINA DE PLATOS */
-
-.dividirPlatos{
-    display: grid;
-    grid-template-columns: repeat(4, 25%);
-    grid-template-rows: repeat(7, auto);
-    grid-template-areas: 
-    "tituloPlatos tituloPlatos tituloPlatos tituloPlatos"
-    "tituloAltaCocina tituloAltaCocina tituloAltaCocina tituloAltaCocina"
-    "tarjetasFilaUno tarjetasFilaUno tarjetasFilaUno tarjetasFilaUno"
-    "tituloPostres tituloPostres tituloPostres tituloPostres"
-    "tarjetasFilaDos tarjetasFilaDos tarjetasFilaDos tarjetasFilaDos"
-    "tituloTradicional tituloTradicional tituloTradicional tituloTradicional"
-    "tarjetasFilaTres  tarjetasFilaTres tarjetasFilaTres tarjetasFilaTres"
-}
-
-.tituloPlatos{grid-area: tituloPlatos; }
-.tituloPlatos.titulo1{ border-color: #ffffff00;}
-.tituloAltaCocina{ grid-area: tituloAltaCocina;
-    text-align: center;
-    font-size: 2rem;
-    margin-top: 2rem;
-    font-family: 'Fredericka the Great', cursive;
-}
-
-.tarjetasFilaUno{ grid-area: tarjetasFilaUno;
-display: flex;
-flex-direction: row;
-justify-content: space-evenly ;
-flex-wrap: wrap;}
-
-
-.tituloPostres{ grid-area: tituloPostres;}
-
-.tarjetasFilaDos{ grid-area: tarjetasFilaDos;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly ;
-    flex-wrap: wrap;}
-
-.tituloTradicional{ grid-area: tituloTradicional;}
-.tarjetasFilaTres{ grid-area: tarjetasFilaTres;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly ;
-    flex-wrap: wrap;}
-
-
-
-.tarjetaPlatos{
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 75% 25%;
-    grid-template-areas: 
-    "imgPlatos"
-    "parrafoPlatos";
-    
-    width: 23%;
-    height: 23rem;
-    background-color: rgb(255, 255, 255);
-    border: 1px solid rgba(134, 132, 131, 0.681);
-    border-radius: 0.2rem;
-   margin: 2rem 0;
-   box-shadow: 1px 2px 6px 2px grey;
-}
-.parrafoPlatos{
-    grid-area:parrafoPlatos ;
-    margin: 1.2rem   ;
-    text-align: center;
-    
-    
-    font-family: 'Bad Script', cursive;
-    
-}
-.imgPlatos{
-    grid-area: imgPlatos;
-    width: 100%;
-   
-    margin: auto;
-  height: 100%;
-}
-
-
-
-
-
-@media only screen and (max-width:480px) {
-    
-
-    body{overflow-x: hidden;}
+@media only screen and (max-width: 480px) {
+  body {
+    overflow-x: hidden; }
   /* MENU MOBILE */
- 
-
-    .menuMobile span{
-        display: block;
-        grid-area: navMobile;
-       
-    }
-    ul{
-        position: fixed;
-        height: 100vh;
-        background-color: #ccc9c9;
-        width: 100%;
-        top: 90px;
-        left: -150%;
-        text-align: center;
-        transition: all .5s;
-        border-bottom: 3px solid black;
-    }
-    nav ul li{
-        display: block;
-        margin: 20px 0;
-        line-height: 15px;
-        
-    }
-    nav ul li a{ font-size: 15px;}
-    li a:hover, li a.acive{
-        background: none;
-        
-    }
-    #check:checked ~ ul{
-        left: 0;
-    }
-    .navHeader{width: 100%;}
-    .navHeader ul{
-
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    
-        max-width: 100%;
-        height: 70%;
-        z-index: 1;
-        
-    }
-    a.cabecero-op{
-        display: block;
-        font-size: 1.5rem;
-       background-color: #f99639;
-       
-      width: 85%;
-      padding: 1rem;
-    }
-    a.cabecero-op:hover{                   
-        background-color: #f2a45b;
-    }
-   
-    /* COMIENZA MEDIA QUERIES PARA EL INDEX */  
-  #contenedorHeader{
-        min-width: 100%;
-     
-        display: grid;
-        grid-template-columns: 30% 70%;
-        grid-template-rows: auto;
-        
-       
-    }
-    .tituloMain .titulo1{width: 100%; font-size: 5rem; margin-bottom: 1rem;}
-    
-   .contenedorImgMain{
+  .menuMobile span {
+    display: block;
+    grid-area: navMobile; }
+  ul {
+    position: fixed;
+    height: 100vh;
+    background-color: #ccc9c9;
+    width: 100%;
+    top: 90px;
+    left: -150%;
+    text-align: center;
+    transition: all .5s;
+    border-bottom: 3px solid black; }
+  nav ul li {
+    display: block;
+    margin: 20px 0;
+    line-height: 15px; }
+  nav ul li a {
+    font-size: 15px; }
+  li a:hover, li a.acive {
+    background: none; }
+  #check:checked ~ ul {
+    left: 0; }
+  .navHeader {
+    width: 100%; }
+  .navHeader ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 100%;
+    height: 70%;
+    z-index: 1; }
+  a.cabecero-op {
+    display: block;
+    font-size: 1.5rem;
+    background-color: #f99639;
+    width: 85%;
+    padding: 1rem; }
+  a.cabecero-op:hover {
+    background-color: #f2a45b; }
+  /* COMIENZA MEDIA QUERIES PARA EL INDEX */
+  #contenedorHeader {
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto; }
+  .tituloMain .titulo1 {
+    width: 100%;
+    font-size: 5rem;
+    margin-bottom: 1rem; }
+  .contenedorImgMain {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: repeat(4, auto);
-   grid-template-areas: 
-   "imagenCentralImgUno"
-   "imagenCentralImgDos"
-   "imagenCentralImgTres"
-   "imagenCentralImgCuatro"
-   ;
-   min-width: 100%;
-  height: 100%;
-  margin-bottom: 0;
-   }
-   .imagenCentral{
+    grid-template-areas: "imagenCentralImgUno" "imagenCentralImgDos" "imagenCentralImgTres" "imagenCentralImgCuatro";
+    min-width: 100%;
+    height: 100%;
+    margin-bottom: 0; }
+  .imagenCentral {
     display: flex;
     justify-content: space-evenly;
     margin: 2rem 0.5rem;
-    padding: 0.2rem;
-   }
-   .imagenCentral img{ opacity: 1;}
-   img.imgIndex{
-    width: 100%;
-   }
-.contenedorVideoMain{
+    padding: 0.2rem; }
+  .imagenCentral img {
+    opacity: 1; }
+  img.imgIndex {
+    width: 100%; }
+  .contenedorVideoMain {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto auto;
-    grid-template-areas: 
-    "dividir-videoLinea"
-    "dividir-video";
+    grid-template-areas: "dividir-videoLinea" "dividir-video";
     margin-top: 3rem;
     min-width: 100%;
-    padding: 0;
-}
-.dividir-video.linea{
+    padding: 0; }
+  .dividir-video.linea {
     width: 100%;
-    margin: 0.5rem;   
-}
-.dividir-video .videoYou{
+    margin: 0.5rem; }
+  .dividir-video .videoYou {
     display: flex;
-    margin: 2rem auto;
-}
-
-.titulo-cocina{font-size: 3.5rem;}
-.parrafo-cocina{font-size: 2rem; padding: 0.5rem;
-     text-align: center;
+    margin: 2rem auto; }
+  .titulo-cocina {
+    font-size: 3.5rem; }
+  .parrafo-cocina {
+    font-size: 2rem;
+    padding: 0.5rem;
+    text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-margin-bottom: 2rem;}
-.videoYou{    width: 23rem;
+    margin-bottom: 2rem; }
+  .videoYou {
+    width: 23rem;
     margin: 1rem .5rem;
-   
-    height: 13rem;
-}
-main{
-    margin-bottom: 2rem;
-}
-footer{
-    min-width: 100%;
-}
-.divirMarcas{display: none;}
-.contenedorFooter{
-    grid-template-columns: 60% 40%;
-}
-.dividirRedes{
-    border: none;
-}
-.dividirLogo{width: 100%;}
-.imgLogo{display: inline-block;}
-
-/* MEDIA QUERIES PAG CONTACTO */
-
-.dividirComentarios{
+    height: 13rem; }
+  main {
+    margin-bottom: 2rem; }
+  footer {
+    min-width: 100%; }
+  .divirMarcas {
+    display: none; }
+  .contenedorFooter {
+    grid-template-columns: 60% 40%; }
+  .dividirRedes {
+    border: none; }
+  .dividirLogo {
+    width: 100%; }
+  .imgLogo {
+    display: inline-block; }
+  /* MEDIA QUERIES PAG CONTACTO */
+  .dividirComentarios {
     display: grid;
-    grid-template-columns:100%;
+    grid-template-columns: 100%;
     grid-template-rows: repeat(3, auto);
-    grid-template-areas: 
-    "tituloContacto"
-    "formulario-contacto"
-    "imgFormulario"
-    ;
-   
-}
-.tituloContacto .titulo1{
-    grid-area:tituloContacto ;
+    grid-template-areas: "tituloContacto" "formulario-contacto" "imgFormulario"; }
+  .tituloContacto .titulo1 {
+    grid-area: tituloContacto;
     font-size: 5rem;
-    margin: 3rem 0;
-}
-.formulario-contacto{
+    margin: 3rem 0; }
+  .formulario-contacto {
     grid-area: formulario-contacto;
     width: 90%;
     padding-top: 2rem;
-    margin-bottom: 2rem;
-}
-input{
-    width: 90%;
-}
-.imgFormulario{
-        grid-area:imgFormulario;
-}
-
-/* MEDIA QUERIES PAG INFORMACION */
-
-.dividirInformacion{
+    margin-bottom: 2rem; }
+  input {
+    width: 90%; }
+  .imgFormulario {
+    grid-area: imgFormulario; }
+  /* MEDIA QUERIES PAG INFORMACION */
+  .dividirInformacion {
     display: grid;
     grid-template-columns: 100%;
-   
     justify-content: center;
     align-items: center;
-    text-align: center;
-}
-.consignaInfo{font-size: 2rem;
+    text-align: center; }
+  .consignaInfo {
+    font-size: 2rem;
     margin: 1rem 0 0 0;
-    padding: 0.8rem;
-}
-.tituloInformacion .titulo1{
-    font-size: 4.5rem;
-    
-}
-.tituloConsigna{
+    padding: 0.8rem; }
+  .tituloInformacion .titulo1 {
+    font-size: 4.5rem; }
+  .tituloConsigna {
     width: 95%;
     font-size: 2.2rem;
-    padding: .5rem .5rem;
-}
-.parrafoInfo .textoParrafo{
-width: 92%;
-font-size: 1.2rem;
-padding: 1.2rem;
-text-indent: 0;
-}
-ul.textoParrafo{
+    padding: .5rem .5rem; }
+  .parrafoInfo .textoParrafo {
+    width: 92%;
+    font-size: 1.2rem;
+    padding: 1.2rem;
+    text-indent: 0; }
+  ul.textoParrafo {
     position: static;
-
-height: auto;
-top: 0;
-left: 0;
-
-}
-li.opcionesParrafo{
-
-}
-
-/* MEDIA QUERIES PAG CURSOS*/
-
-.dividirCursos{
+    height: auto;
+    top: 0;
+    left: 0; }
+  /* MEDIA QUERIES PAG CURSOS*/
+  .dividirCursos {
     display: grid;
-    grid-template-columns:  100%;
-    grid-template-rows:  repeat(3, auto);
-    grid-template-areas: 
-    "tituloCursos"
-    "cursoCocinaAutor"
-    "otrosCursos";
-}
-.cursoCocinaAutor{
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "tituloCursos" "cursoCocinaAutor" "otrosCursos"; }
+  .cursoCocinaAutor {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: repeat(6, auto);
-    grid-template-areas: 
-    "tituloCurso1"
-    "tarjetaCurso1"
-    "tituloCurso2"
-    "tarjetaCurso2 "
-    "tituloCurso3"
-    "tarjetaCurso3"
-    ;
-}
-.otrosCursos{
+    grid-template-areas: "tituloCurso1" "tarjetaCurso1" "tituloCurso2" "tarjetaCurso2 " "tituloCurso3" "tarjetaCurso3"; }
+  .otrosCursos {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: repeat(8, auto);
-    grid-template-areas: 
-    "tituloCurso4"
-    "tarjetaCurso4 "
-    "tituloCurso5"
-    "tarjetaCurso5 "
-    "tituloCurso6"
-    "tarjetaCurso6 "
-    "tituloCurso7"
-    "tarjetaCurso7 ";
-}
-.tituloCursos .titulo1{ 
-    width:100% ;
-    font-size: 5rem;}
-    .formaTarjeta{
-        padding: 1rem;
-    }
-.cursoTitulo{
-    height:auto;
+    grid-template-areas: "tituloCurso4" "tarjetaCurso4 " "tituloCurso5" "tarjetaCurso5 " "tituloCurso6" "tarjetaCurso6 " "tituloCurso7" "tarjetaCurso7 "; }
+  .tituloCursos .titulo1 {
+    width: 100%;
+    font-size: 5rem; }
+  .formaTarjeta {
+    padding: 1rem; }
+  .cursoTitulo {
+    height: auto;
     width: 80%;
-  padding: .6rem;
-   font-size: 0.9rem;
-   margin-top: 3rem;
-}
-.tituloCurso1,.tituloCurso2,.tituloCurso3{
+    padding: .6rem;
+    font-size: 0.9rem;
+    margin-top: 3rem; }
+  .tituloCurso1, .tituloCurso2, .tituloCurso3 {
     background-image: linear-gradient(to top, #c8882f, #e19121, #df901b, #e69718, #f39f18);
-    color: white;margin-top: 3rem;
- }
-
-
-.comidaJapon,.comidaMex, .comidaPastas, .comidaPostres { height: 5.5rem;}
-
-
-/* MEDIA QUERIES PAG PLATOS*/
-.dividirPlatos{
+    color: white;
+    margin-top: 3rem; }
+  .comidaJapon, .comidaMex, .comidaPastas, .comidaPostres {
+    height: 5.5rem; }
+  /* MEDIA QUERIES PAG PLATOS*/
+  .dividirPlatos {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: repeat(7, auto);
-    grid-template-areas:  
-    "tituloPlatos"
-    "tituloAltaCocina"
-    "tarjetasFilaUno"
-    "tituloPostres"
-    "tarjetasFilaDos"
-    "tituloTradicional"
-    "tarjetasFilaTres"
-    ;
-}
-.tarjetasFilaUno{
+    grid-template-areas: "tituloPlatos" "tituloAltaCocina" "tarjetasFilaUno" "tituloPostres" "tarjetasFilaDos" "tituloTradicional" "tarjetasFilaTres"; }
+  .tarjetasFilaUno {
     width: 100%;
     display: grid;
-   grid-template-columns: 100%;
-   grid-template-rows: repeat(4, auto);
-   grid-template-areas: 
-   "tarjetaUno"
-   "tarjetaDos"
-   "tarjetaTres"
-   "tarjetaCuatro";
-}
-.tarjetasFilaDos{
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "tarjetaUno" "tarjetaDos" "tarjetaTres" "tarjetaCuatro"; }
+  .tarjetasFilaDos {
     width: 100%;
     display: grid;
-   grid-template-columns: 100%;
-   grid-template-rows: repeat(4, auto);
-   
-}
-.tarjetasFilaTres{
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, auto); }
+  .tarjetasFilaTres {
     width: 100%;
     display: grid;
-   grid-template-columns: 100%;
-   grid-template-rows: repeat(4, auto);
-   
-}
-.tarjetaPlatos{
-   margin: auto;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, auto); }
+  .tarjetaPlatos {
+    margin: auto;
     width: 75%;
-     margin-bottom: 1.5rem;
-      font-size:0.8rem;}
-
-.tituloPlatos .titulo1{    font-size: 6rem;}
-.tituloAltaCocina{margin-bottom: 1rem;}
-.parrafoPlatos{font-size: 1rem;}
-}
+    margin-bottom: 1.5rem;
+    font-size: 0.8rem; }
+  .tituloPlatos .titulo1 {
+    font-size: 6rem; }
+  .tituloAltaCocina {
+    margin-bottom: 1rem; }
+  .parrafoPlatos {
+    font-size: 1rem; } }

@@ -1,0 +1,122 @@
+.dividirCursos{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto auto auto ;
+    grid-template-areas: 
+    "tituloCursos tituloCursos tituloCursos tituloCursos" 
+    "cursoCocinaAutor cursoCocinaAutor cursoCocinaAutor cursoCocinaAutor"
+    "otrosCursos otrosCursos otrosCursos otrosCursos"
+}
+
+.tituloCursos{ grid-area: tituloCursos;}
+
+.cursoCocinaAutor{ 
+    grid-area: cursoCocinaAutor;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    " tituloCurso1 tituloCurso2 tituloCurso3"
+    "tarjetaCurso1 tarjetaCurso2 tarjetaCurso3"
+}
+
+.tituloCurso1{ grid-area: tituloCurso1;}
+.tituloCurso2{ grid-area: tituloCurso2;}
+.tituloCurso3{ grid-area: tituloCurso3;}
+.tarjetaCurso1{ grid-area: tarjetaCurso1;}
+.tarjetaCurso2{ grid-area: tarjetaCurso2;}
+.tarjetaCurso3{ grid-area: tarjetaCurso3;}
+
+.tituloCurso1,.tituloCurso2,.tituloCurso3{
+    background-image: linear-gradient(to top, #df9633, #e79d33, #efa333, #f7aa33, #ffb133);}
+.cursoTitulo{
+    width: 65%;
+    text-shadow: 1px 1px 1px rgb(52, 51, 51);
+    margin: 0 auto;
+    background-color: rgb(224, 224, 224);
+    font-size: 10px;
+    color: rgb(255, 255, 255);
+    padding: 0.5rem 2rem;
+    text-align: center;
+    
+    box-shadow: 2px 2px 2px gray;
+    border: 1px solid rgba(70, 69, 69, 0.568);
+    border-radius: 1rem;
+}
+.formaTarjeta{
+    margin: 0.5rem auto;
+    background-color: #ffffff;
+    text-align: center;
+    border: 2px solid rgba(75, 74, 74, 0.541);
+    border-radius: 1rem;
+    padding: 1rem 2rem 2rem ;
+    box-shadow: 3px 2px 6px 2px rgb(110, 109, 109);
+}
+img.imgTarjeta{
+    width: 16rem;
+    border-radius: 2rem  2rem 0 0;
+    margin-bottom: .2rem;
+    border: 1px solid rgba(128, 128, 128, 0.46);
+}
+.pieTarjeta{
+    border-top: 0.5rem solid rgb(100, 100, 100);
+   padding-top: 1.5rem;
+    color: rgb(237, 112, 4);
+    text-shadow: 1px 1px 1px rgb(119, 113, 113);
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.nombreTarjeta{
+    font-size: 1.3rem;
+    text-align: left;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+}
+.leerMas{
+    font-size: 1.1rem;
+    text-align: right;
+    color: blue;
+    cursor: pointer;
+}
+
+
+.otrosCursos{ 
+    grid-area: otrosCursos;
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "tituloCurso4 tituloCurso5 tituloCurso6 tituloCurso7"
+    " tarjetaCurso4 tarjetaCurso5 tarjetaCurso6 tarjetaCurso7"
+    
+}
+.tituloCurso4{ grid-area: tituloCurso4;}
+.tituloCurso5{ grid-area: tituloCurso5;}
+.tituloCurso6{ grid-area: tituloCurso6;}
+.tituloCurso7{ grid-area: tituloCurso7;}
+.tarjetaCurso4{ grid-area: tarjetaCurso4;}
+.tarjetaCurso5{ grid-area: tarjetaCurso5;}
+.tarjetaCurso6{ grid-area: tarjetaCurso6;}
+.tarjetaCurso7{ grid-area: tarjetaCurso7;}
+
+/* Tarjeta Comida Mex */
+.comidaMex{ background-color: rgb(180, 243, 87);}
+.tarjetaMex{ background-color: rgb(243, 255, 206);}
+.pieMex{ color: rgb(104, 181, 31);}
+
+/* Tarjeta Curso Pastas */
+.comidaPastas{ background-color: rgb(248, 187, 248) ;}
+.tarjetaPastas{ background-color: rgb(250, 206, 250);}
+.piePastas{ color: rgb(107, 12, 107);}
+
+/* Tarjeta Comida Jap */
+.comidaJapon{ background-color: #f8b25e;}
+.tarjetaJapon{ background-color: #fedba6;}
+.pieJapon{ color: rgb(222, 61, 2);}
+
+/* Tarjeta Curso Postres */
+.comidaPostres{ background-color: #7db8ff;}
+.tarjetaPostres{ background-color: #c4defc;}
+.piePostres{ color: #013575;}
