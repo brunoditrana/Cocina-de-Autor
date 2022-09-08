@@ -688,6 +688,8 @@ img.imgTarjeta {
     justify-content: space-evenly;
     margin: 2rem 0.5rem;
     padding: 0.2rem; }
+  .dividirMarcas {
+    display: none; }
   .imagenCentral img {
     opacity: 1; }
   img.imgIndex {
