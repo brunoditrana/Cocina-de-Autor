@@ -1,67 +1,49 @@
 footer{  
+    /* Pie de Pagina*/ 
 grid-area: footer;             
-background-image: $bgColorFondo;
+background-image: linear-gradient(to bottom, #494a4c, #3c3c3e, #2f2f30, #222223, #161617);
 border-top: 1px solid black;
 box-shadow: 1px 1px 3px 2px rgb(130, 128, 128);
 
+
 }
-.contenedorFooter{  
-    display: grid;                 
-        grid-template-rows: auto;
-    grid-template-columns: 30% 50% 20%; 
-    grid-template-areas:
-     "dividirMarcas dividirRedes dividirLogo"
-     ;
+.contenedorFooter{                   /* Pie de Pagina*/ 
+display:grid;
+grid-template-columns: 30% 50% 20%;
+grid-template-rows: auto; 
+grid-template-areas: "divirMarcas" "dividirRedes" "dividirLogo";
 
+}
+.divirMarcas{                      /* Pie de Pagina*/ 
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-bottom: 20px;
+}
+img.img-publicidad{                       /* Pie de Pagina*/ 
+width: 80px;
+height: 50px;
+margin-top: 30px;
+margin-left: 10px;
 
-        .dividirMarcas{  
-            grid-area: dividirMarcas;                   
-            
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
+}
+.dividirRedes{                            /* Pie de Pagina*/ 
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+border-left: 3px solid #fdd68d;
+border-right: 3px solid #fdd68d;
+}
+.img-redes{                     /* Pie de Pagina*/ 
+width: 3rem;
+margin-left: 0.5rem;
+}
 
-                img.img-publicidad{                       
-                    width: 5rem;
-                    height: 2.5rem;
-                    
+.dividirLogo{                            /* Pie de Pagina*/
+display: flex;
+justify-content: center;
+align-items: center;
 
-                }
-            }  
-        .dividirRedes{   
-            grid-area: dividirRedes;                         
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-left: 3px solid #fdd68d;
-            border-right: 3px solid #fdd68d;
-
-                img.img-redes{                     
-                    width: 3rem;
-                    margin-left: 0.5rem;
-                }
-            }
-        .dividirLogo{   
-            grid-area: dividirLogo;                         
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            .imgLogo{
-                img.iconoLogo{
-                     
-                    border-radius: 5rem;                 
-                    width: 5rem;
-                    margin: 6px 0px 6px 20px;
-                     
-                }
-            }
-            }    
-     }     
-
-
-
-
-
-
+}

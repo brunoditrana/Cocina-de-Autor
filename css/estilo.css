@@ -8,53 +8,65 @@ html {
   background-image: url(../img/fondoo3.png);
   background-attachment: fixed; }
 
-#grilla {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-  grid-template-areas: "header"  "main" "footer"; }
-
 header {
+  /* Encabezado*/
   grid-area: header;
-  background-image: linear-gradient(to bottom, #494a4c, #3c3c3e, #2f2f30, #222223, #161617);
+  background-image: linear-gradient(to bottom, #121213, #1c1c1e, #262628, #303133, #3b3c3f);
   border-bottom: 1px solid black;
   box-shadow: 1px 1px 3px 2px #6e6d6d; }
 
 #contenedorHeader {
+  /* Encabezado GRID*/
   display: grid;
   grid-template-columns: 10% 90%;
   grid-template-rows: auto;
   grid-template-areas: "imgLogo navHeader";
   justify-content: space-evenly; }
-  #contenedorHeader .imgLogo {
-    grid-area: imgLogo; }
-    #contenedorHeader .imgLogo img {
-      border-radius: 5rem;
-      width: 5rem;
-      margin: 6px 0px 6px 20px; }
-  #contenedorHeader .navHeader {
-    width: 100%;
-    grid-area: navHeader;
-    align-self: center; }
-    #contenedorHeader .navHeader ul {
-      max-width: 80%;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      list-style: none;
-      justify-content: space-evenly; }
-      #contenedorHeader .navHeader ul li a.cabecero-op {
-        background-color: #adacab;
-        font-size: 20px;
-        font-family: 'Original Surfer';
-        text-shadow: 1px 2px 2px #040404;
-        padding: 12px 60px;
-        border: 1.5px solid black;
-        text-decoration: none;
-        color: white;
-        border-radius: 2px 8px 2px 8px; }
-        #contenedorHeader .navHeader ul li a.cabecero-op:hover {
-          background-color: #d9d8d7; }
+
+.imgLogo {
+  /* Encabezado GRID*/
+  grid-area: imgLogo; }
+
+.imgLogo img {
+  border-radius: 5rem;
+  /* Encabezado GRID*/
+  width: 5rem;
+  margin: 6px 0px 6px 20px; }
+
+.navHeader {
+  width: 110%;
+  /* Encabezado GRID*/
+  grid-area: navHeader;
+  align-self: center; }
+
+.navHeader ul {
+  max-width: 90%;
+  /* Encabezado GRID*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  list-style: none;
+  justify-content: space-evenly; }
+
+ul li a {
+  /* Encabezado GRID*/
+  width: 18%; }
+
+a.cabecero-op {
+  /* Encabezado Botones*/
+  background-color: #adacab;
+  font-size: 20px;
+  font-family: 'Original Surfer';
+  text-shadow: 1px 2px 2px #040404;
+  padding: 12px 60px;
+  border: 1.5px solid black;
+  text-decoration: none;
+  color: white;
+  border-radius: 2px 8px 2px 8px; }
+
+a.cabecero-op:hover {
+  /* Encabezado Botones*/
+  background-color: #d9d8d7; }
 
 /* MENU MOBILE */
 .menuMobile span {
@@ -75,44 +87,53 @@ header {
   display: none; }
 
 footer {
+  /* Pie de Pagina*/
   grid-area: footer;
   background-image: linear-gradient(to bottom, #494a4c, #3c3c3e, #2f2f30, #222223, #161617);
   border-top: 1px solid black;
   box-shadow: 1px 1px 3px 2px #828080; }
 
 .contenedorFooter {
+  /* Pie de Pagina*/
   display: grid;
-  grid-template-rows: auto;
   grid-template-columns: 30% 50% 20%;
-  grid-template-areas: "dividirMarcas dividirRedes dividirLogo"; }
-  .contenedorFooter .dividirMarcas {
-    grid-area: dividirMarcas;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center; }
-    .contenedorFooter .dividirMarcas img.img-publicidad {
-      width: 5rem;
-      height: 2.5rem; }
-  .contenedorFooter .dividirRedes {
-    grid-area: dividirRedes;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-left: 3px solid #fdd68d;
-    border-right: 3px solid #fdd68d; }
-    .contenedorFooter .dividirRedes img.img-redes {
-      width: 3rem;
-      margin-left: 0.5rem; }
-  .contenedorFooter .dividirLogo {
-    grid-area: dividirLogo;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .contenedorFooter .dividirLogo .imgLogo img.iconoLogo {
-      border-radius: 5rem;
-      width: 5rem;
-      margin: 6px 0px 6px 20px; }
+  grid-template-rows: auto;
+  grid-template-areas: "divirMarcas" "dividirRedes" "dividirLogo"; }
+
+.divirMarcas {
+  /* Pie de Pagina*/
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; }
+
+img.img-publicidad {
+  /* Pie de Pagina*/
+  width: 80px;
+  height: 50px;
+  margin-top: 30px;
+  margin-left: 10px; }
+
+.dividirRedes {
+  /* Pie de Pagina*/
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 3px solid #fdd68d;
+  border-right: 3px solid #fdd68d; }
+
+.img-redes {
+  /* Pie de Pagina*/
+  width: 3rem;
+  margin-left: 0.5rem; }
+
+.dividirLogo {
+  /* Pie de Pagina*/
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 main {
   grid-area: main;

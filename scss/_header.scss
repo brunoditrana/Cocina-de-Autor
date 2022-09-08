@@ -1,82 +1,59 @@
-#grilla{
+header{                  /* Encabezado*/
+    grid-area: header;
+    background-image: linear-gradient(to bottom, #121213, #1c1c1e, #262628, #303133, #3b3c3f);
+    border-bottom: 1px solid black;
+    box-shadow: 1px 1px 3px 2px rgb(110, 109, 109);
+  
+}
+#contenedorHeader{                /* Encabezado GRID*/
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 10% 90%;
+  
     grid-template-rows: auto;
-    grid-template-areas: "header" 
-    "main"
-     "footer" ;
-    }
+    grid-template-areas: "imgLogo navHeader";
+   justify-content: space-evenly;
+}
+.imgLogo{                       /* Encabezado GRID*/
+    grid-area: imgLogo ;     
+}
+.imgLogo img{ 
    
-        header{                  
-            grid-area: header;
-            background-image: $bgColorFondo;
-            border-bottom: 1px solid black;
-            box-shadow: 1px 1px 3px 2px rgb(110, 109, 109);
-        }
-            #contenedorHeader{               
-                display: grid;
-                grid-template-columns: 10% 90%;
-                grid-template-rows: auto;
-                grid-template-areas: "imgLogo navHeader";
-                justify-content: space-evenly;
+    border-radius: 5rem;                 /* Encabezado GRID*/
+    width: 5rem;
+    margin: 6px 0px 6px 20px;
+}
+.navHeader{ 
+    width: 110%;                    /* Encabezado GRID*/
+    grid-area: navHeader;
+    align-self: center;
+}
+.navHeader ul{   
+    max-width: 90%;               /* Encabezado GRID*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    list-style:none;     
+    justify-content: space-evenly;
+}
+ul li a{                         /* Encabezado GRID*/
+    width: 18%; 
+}
 
-                    .imgLogo{                       
-                        grid-area: imgLogo ; 
-                            
-                        img{ 
-                            border-radius: 5rem;                 
-                            width: 5rem;
-                            margin: 6px 0px 6px 20px;
-                         }
-                            
-                    }
-                    .navHeader{ 
-                        width: 100%;                  
-                        grid-area: navHeader;
-                        align-self: center;
-                        
-                         ul{   
-                            max-width: 80%;              
-                            display: flex;
-                            flex-direction: row;
-                            flex-wrap: nowrap;
-                            list-style:none;     
-                            justify-content: space-evenly;
-
-                                 li a{                         
-                                    
-                                    &.cabecero-op{                
-                                        background-color: #adacab;
-                                        font-size: 20px;
-                                        font-family: 'Original Surfer';
-                                       text-shadow: 1px 2px 2px rgb(4, 4, 4);
-                                        padding: 12px 60px;
-                                        border: 1.5px solid black;
-                                        text-decoration: none;
-                                        color: rgb(255, 255, 255);
-                                        border-radius: 2px 8px 2px 8px;
-                                        &:hover{
-                                            background-color: #d9d8d7;
-                                        }
-                                    }
-                                }
-                        }
-                    }
-
-
-        }
+a.cabecero-op{                 /* Encabezado Botones*/  
+    background-color: #adacab;
+    font-size: 20px;
+    font-family: 'Original Surfer';
+   text-shadow: 1px 2px 2px rgb(4, 4, 4);
+    padding: 12px 60px;
+    border: 1.5px solid black;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-radius: 2px 8px 2px 8px;
+}
+a.cabecero-op:hover{                   /* Encabezado Botones*/
+    background-color: #d9d8d7;
     
-
-
-
-
-
-
-
-
-
-
-
+}
 
 /* MENU MOBILE */
 .menuMobile span{
