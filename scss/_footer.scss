@@ -14,11 +14,14 @@ grid-template-rows: auto;
 grid-template-areas: "divirMarcas" "dividirRedes" "dividirLogo";
 
 }
-.divirMarcas{                      /* Pie de Pagina*/ 
-width: 100%;
-display: flex;
+.claseFlexb{                   //Clase usada como Extend
+    display: flex;
 justify-content: center;
 align-items: center;
+}
+.divirMarcas{    
+    @extend .claseFlexb;         //Extend           
+width: 100%;
 margin-bottom: 20px;
 }
 img.img-publicidad{                       /* Pie de Pagina*/ 
@@ -29,11 +32,9 @@ margin-left: 10px;
 
 }
 .dividirRedes{                            /* Pie de Pagina*/ 
-width: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
-border-left: 3px solid #fdd68d;
+    @extend .claseFlexb;             //Extend      
+    width: 100%;
+    border-left: 3px solid #fdd68d;
 border-right: 3px solid #fdd68d;
 }
 .img-redes{                     /* Pie de Pagina*/ 
@@ -42,8 +43,5 @@ margin-left: 0.5rem;
 }
 
 .dividirLogo{                            /* Pie de Pagina*/
-display: flex;
-justify-content: center;
-align-items: center;
-
+    @extend .claseFlexb;                  //Extend      
 }

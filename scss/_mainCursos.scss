@@ -101,22 +101,43 @@ img.imgTarjeta{
 .tarjetaCurso6{ grid-area: tarjetaCurso6;}
 .tarjetaCurso7{ grid-area: tarjetaCurso7;}
 
+// MAPA -  MAP-GET
+
+$bgTarjetas: (
+        tituloMex:#b4f357,
+        tarjetabgMex:#f3ffce,
+        letraMex:#68b51f,
+
+        tituloPast:#f8bbf8,
+        tarjetabgPast:#facefa,
+        letraPast: #6b0c6b,
+
+        tituloJap:#f8b25e,
+        tarjetabgJap:#fedba6,
+        letraJap: #de3d02,
+        
+        tituloPostres: #7db8ff,
+        tarjetasbgPostres:#c4defc,
+        letraPostres:#013575
+);
+
+
 /* Tarjeta Comida Mex */
-.comidaMex{ background-color: rgb(180, 243, 87);}
-.tarjetaMex{ background-color: rgb(243, 255, 206);}
-.pieMex{ color: rgb(104, 181, 31);}
+.comidaMex{ background-color: map-get($bgTarjetas , tituloMex )}
+.tarjetaMex{ background-color: map-get($bgTarjetas , tarjetabgMex )}
+.pieMex{ color: map-get($bgTarjetas , letraMex )}
 
 /* Tarjeta Curso Pastas */
-.comidaPastas{ background-color: rgb(248, 187, 248) ;}
-.tarjetaPastas{ background-color: rgb(250, 206, 250);}
-.piePastas{ color: rgb(107, 12, 107);}
+.comidaPastas{ background-color:map-get($bgTarjetas , tituloPast )}
+.tarjetaPastas{ background-color: map-get($bgTarjetas , tarjetabgPast )}
+.piePastas{ color: map-get($bgTarjetas , letraPast )}
 
 /* Tarjeta Comida Jap */
-.comidaJapon{ background-color: #f8b25e;}
-.tarjetaJapon{ background-color: #fedba6;}
-.pieJapon{ color: rgb(222, 61, 2);}
+.comidaJapon{ background-color: map-get($bgTarjetas , tituloJap )}
+.tarjetaJapon{ background-color: map-get($bgTarjetas , tarjetabgJap )}
+.pieJapon{ color: map-get($bgTarjetas , letraJap )}
 
 /* Tarjeta Curso Postres */
-.comidaPostres{ background-color: #7db8ff;}
-.tarjetaPostres{ background-color: #c4defc;}
-.piePostres{ color: #013575;}
+.comidaPostres{ background-color: map-get($bgTarjetas , tituloPostres )}
+.tarjetaPostres{ background-color: map-get($bgTarjetas , tarjetasbgPostres )}
+.piePostres{ color: map-get($bgTarjetas , letraPostres )}

@@ -11,6 +11,12 @@
     "tituloTradicional tituloTradicional tituloTradicional tituloTradicional"
     "tarjetasFilaTres  tarjetasFilaTres tarjetasFilaTres tarjetasFilaTres"
 }
+.claseFlex{                               //Clase usada como Extend
+    display: flex;
+flex-direction: row;
+justify-content: space-evenly ;
+flex-wrap: wrap;
+}
 
 .tituloPlatos{grid-area: tituloPlatos; }
 .tituloPlatos.titulo1{ border-color: #ffffff00;}
@@ -22,26 +28,21 @@
 }
 
 .tarjetasFilaUno{ grid-area: tarjetasFilaUno;
-display: flex;
-flex-direction: row;
-justify-content: space-evenly ;
-flex-wrap: wrap;}
+    @extend .claseFlex;                            // Extend          
+} 
 
 
 .tituloPostres{ grid-area: tituloPostres;}
 
 .tarjetasFilaDos{ grid-area: tarjetasFilaDos;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly ;
-    flex-wrap: wrap;}
+    @extend .claseFlex;                             // Extend 
+}
 
 .tituloTradicional{ grid-area: tituloTradicional;}
+
 .tarjetasFilaTres{ grid-area: tarjetasFilaTres;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly ;
-    flex-wrap: wrap;}
+    @extend .claseFlex;                              // Extend 
+}
 
 
 
@@ -73,7 +74,6 @@ flex-wrap: wrap;}
 .imgPlatos{
     grid-area: imgPlatos;
     width: 100%;
-   
     margin: auto;
   height: 100%;
 }

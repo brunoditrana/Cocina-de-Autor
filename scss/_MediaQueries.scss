@@ -2,19 +2,23 @@
     
 
     body{overflow-x: hidden;}
-  /* MENU MOBILE */
- 
 
+    @mixin altoAncho($width, $height) {          //Mixin 
+        width: $width;
+        height: $height;
+    }
+  /* MENU MOBILE */
     .menuMobile span{
         display: block;
         grid-area: navMobile;
        
     }
     ul{
+        @include altoAncho(100%, 100vh );            //Aplicando Mixin
         position: fixed;
-        height: 100vh;
+        
         background-color: #ccc9c9;
-        width: 100%;
+        
         top: 90px;
         left: -150%;
         text-align: center;
@@ -62,18 +66,19 @@
     /* COMIENZA MEDIA QUERIES PARA EL INDEX */  
   #contenedorHeader{
         min-width: 100%;
-     
         display: grid;
         grid-template-columns: 30% 70%;
-        grid-template-rows: auto;
-        
-       
+        grid-template-rows: auto;   
     }
     .tituloMain .titulo1{width: 100%; font-size: 5rem; margin-bottom: 1rem;}
     
+    .claseGrid{                            //Clase usada como Extend
+        display: grid;
+        grid-template-columns: 100%;
+    }
    .contenedorImgMain{
-    display: grid;
-    grid-template-columns: 100%;
+  
+    @extend .claseGrid;                          //Extend
     grid-template-rows: repeat(4, auto);
    grid-template-areas: 
    "imagenCentralImgUno"
@@ -99,8 +104,7 @@
     width: 100%;
    }
 .contenedorVideoMain{
-    display: grid;
-    grid-template-columns: 100%;
+    @extend .claseGrid;                                   //Extend
     grid-template-rows: auto auto;
     grid-template-areas: 
     "dividir-videoLinea"
@@ -146,10 +150,9 @@ footer{
 
 /* MEDIA QUERIES PAG CONTACTO */
 
-.dividirComentarios{
-    display: grid;
-    grid-template-columns:100%;
-    grid-template-rows: repeat(3, auto);
+.dividirComentarios{ 
+    @extend .claseGrid;                                  //Extend
+    grid-template-rows: repeat(3, auto); 
     grid-template-areas: 
     "tituloContacto"
     "formulario-contacto"
@@ -178,8 +181,7 @@ input{
 /* MEDIA QUERIES PAG INFORMACION */
 
 .dividirInformacion{
-    display: grid;
-    grid-template-columns: 100%;
+    @extend .claseGrid;                              //Extend
    
     justify-content: center;
     align-items: center;
@@ -215,8 +217,7 @@ left: 0;
 /* MEDIA QUERIES PAG CURSOS*/
 
 .dividirCursos{
-    display: grid;
-    grid-template-columns:  100%;
+    @extend .claseGrid;                               //Extend
     grid-template-rows:  repeat(3, auto);
     grid-template-areas: 
     "tituloCursos"
@@ -224,8 +225,7 @@ left: 0;
     "otrosCursos";
 }
 .cursoCocinaAutor{
-    display: grid;
-    grid-template-columns: 100%;
+    @extend .claseGrid;                                //Extend
     grid-template-rows: repeat(6, auto);
     grid-template-areas: 
     "tituloCurso1"
@@ -237,8 +237,7 @@ left: 0;
     ;
 }
 .otrosCursos{
-    display: grid;
-    grid-template-columns: 100%;
+    @extend .claseGrid;                                //Extend
     grid-template-rows: repeat(8, auto);
     grid-template-areas: 
     "tituloCurso4"
@@ -257,8 +256,8 @@ left: 0;
         padding: 1rem;
     }
 .cursoTitulo{
-    height:auto;
-    width: 80%;
+    @include altoAncho(80%, auto ); 
+    
   padding: .6rem;
    font-size: 0.9rem;
    margin-top: 3rem;
@@ -274,8 +273,7 @@ left: 0;
 
 /* MEDIA QUERIES PAG PLATOS*/
 .dividirPlatos{
-    display: grid;
-    grid-template-columns: 100%;
+    @extend .claseGrid;                              //Extend
     grid-template-rows: repeat(7, auto);
     grid-template-areas:  
     "tituloPlatos"
@@ -289,8 +287,7 @@ left: 0;
 }
 .tarjetasFilaUno{
     width: 100%;
-    display: grid;
-   grid-template-columns: 100%;
+    @extend .claseGrid;                           //Extend
    grid-template-rows: repeat(4, auto);
    grid-template-areas: 
    "tarjetaUno"
@@ -300,15 +297,13 @@ left: 0;
 }
 .tarjetasFilaDos{
     width: 100%;
-    display: grid;
-   grid-template-columns: 100%;
+    @extend .claseGrid;                         //Extend 
    grid-template-rows: repeat(4, auto);
    
 }
 .tarjetasFilaTres{
     width: 100%;
-    display: grid;
-   grid-template-columns: 100%;
+    @extend .claseGrid;                        //Extend
    grid-template-rows: repeat(4, auto);
    
 }

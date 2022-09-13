@@ -1,3 +1,9 @@
+//MAp
+$font-family: (
+    font-titulo: 'Original Surfer',
+    font-parrafo: 'Arima'
+);
+
 main{
     grid-area: main;
     max-width: 99%;
@@ -16,7 +22,7 @@ main{
     text-align: center;
     font-size: 75px;
     margin: 60px 0;
-    font-family: 'Original Surfer', cursive;
+    font-family: map-get($font-family , font-titulo );         //map-Get
    color: rgb(41, 39, 39);
    text-shadow: 4px 2px 3px  rgb(170, 165, 165);
   
@@ -92,7 +98,7 @@ img.imgIndex:hover{                 /* Imagenes Principal*/
     text-align: center;
     font-size: 40px;
     margin-bottom: 20px;
-    font-family: 'Original Surfer', cursive;
+    font-family: map-get($font-family , font-titulo );   //map-Get
     
 }
 .parrafo-cocina{                      /* Video + Parrafo*/ 
@@ -100,5 +106,5 @@ img.imgIndex:hover{                 /* Imagenes Principal*/
     margin-top: 45px;
     padding: 50px;
     flex-wrap: nowrap;
-    font-family:'Arima', cursive;
+    font-family: map-get($font-family , font-parrafo );   //map-Get
 }

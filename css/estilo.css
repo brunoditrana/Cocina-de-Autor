@@ -100,12 +100,13 @@ footer {
   grid-template-rows: auto;
   grid-template-areas: "divirMarcas" "dividirRedes" "dividirLogo"; }
 
-.divirMarcas {
-  /* Pie de Pagina*/
-  width: 100%;
+.claseFlexb, .divirMarcas, .dividirRedes, .dividirLogo {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; }
+
+.divirMarcas {
+  width: 100%;
   margin-bottom: 20px; }
 
 img.img-publicidad {
@@ -118,9 +119,6 @@ img.img-publicidad {
 .dividirRedes {
   /* Pie de Pagina*/
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-left: 3px solid #fdd68d;
   border-right: 3px solid #fdd68d; }
 
@@ -130,10 +128,7 @@ img.img-publicidad {
   margin-left: 0.5rem; }
 
 .dividirLogo {
-  /* Pie de Pagina*/
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+  /* Pie de Pagina*/ }
 
 main {
   grid-area: main;
@@ -152,7 +147,7 @@ main {
   text-align: center;
   font-size: 75px;
   margin: 60px 0;
-  font-family: 'Original Surfer', cursive;
+  font-family: "Original Surfer";
   color: #292727;
   text-shadow: 4px 2px 3px #aaa5a5;
   width: auto;
@@ -226,7 +221,7 @@ img.imgIndex:hover {
   text-align: center;
   font-size: 40px;
   margin-bottom: 20px;
-  font-family: 'Original Surfer', cursive; }
+  font-family: "Original Surfer"; }
 
 .parrafo-cocina {
   /* Video + Parrafo*/
@@ -234,7 +229,7 @@ img.imgIndex:hover {
   margin-top: 45px;
   padding: 50px;
   flex-wrap: nowrap;
-  font-family: 'Arima', cursive; }
+  font-family: "Arima"; }
 
 .dividirComentarios {
   display: grid;
@@ -316,6 +311,12 @@ textarea {
   grid-template-rows: repeat(7, auto);
   grid-template-areas: "tituloPlatos tituloPlatos tituloPlatos tituloPlatos" "tituloAltaCocina tituloAltaCocina tituloAltaCocina tituloAltaCocina" "tarjetasFilaUno tarjetasFilaUno tarjetasFilaUno tarjetasFilaUno" "tituloPostres tituloPostres tituloPostres tituloPostres" "tarjetasFilaDos tarjetasFilaDos tarjetasFilaDos tarjetasFilaDos" "tituloTradicional tituloTradicional tituloTradicional tituloTradicional" "tarjetasFilaTres  tarjetasFilaTres tarjetasFilaTres tarjetasFilaTres"; }
 
+.claseFlex, .tarjetasFilaUno, .tarjetasFilaDos, .tarjetasFilaTres {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap; }
+
 .tituloPlatos {
   grid-area: tituloPlatos; }
 
@@ -330,31 +331,19 @@ textarea {
   font-family: 'Fredericka the Great', cursive; }
 
 .tarjetasFilaUno {
-  grid-area: tarjetasFilaUno;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap; }
+  grid-area: tarjetasFilaUno; }
 
 .tituloPostres {
   grid-area: tituloPostres; }
 
 .tarjetasFilaDos {
-  grid-area: tarjetasFilaDos;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap; }
+  grid-area: tarjetasFilaDos; }
 
 .tituloTradicional {
   grid-area: tituloTradicional; }
 
 .tarjetasFilaTres {
-  grid-area: tarjetasFilaTres;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap; }
+  grid-area: tarjetasFilaTres; }
 
 .tarjetaPlatos {
   display: grid;
@@ -629,10 +618,10 @@ img.imgTarjeta {
     display: block;
     grid-area: navMobile; }
   ul {
-    position: fixed;
-    height: 100vh;
-    background-color: #ccc9c9;
     width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: #ccc9c9;
     top: 90px;
     left: -150%;
     text-align: center;
@@ -675,9 +664,10 @@ img.imgTarjeta {
     width: 100%;
     font-size: 5rem;
     margin-bottom: 1rem; }
-  .contenedorImgMain {
+  .claseGrid, .contenedorImgMain, .contenedorVideoMain, .dividirComentarios, .dividirInformacion, .dividirCursos, .cursoCocinaAutor, .otrosCursos, .dividirPlatos, .tarjetasFilaUno, .tarjetasFilaDos, .tarjetasFilaTres {
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 100%; }
+  .contenedorImgMain {
     grid-template-rows: repeat(4, auto);
     grid-template-areas: "imagenCentralImgUno" "imagenCentralImgDos" "imagenCentralImgTres" "imagenCentralImgCuatro";
     min-width: 100%;
@@ -695,8 +685,6 @@ img.imgTarjeta {
   img.imgIndex {
     width: 100%; }
   .contenedorVideoMain {
-    display: grid;
-    grid-template-columns: 100%;
     grid-template-rows: auto auto;
     grid-template-areas: "dividir-videoLinea" "dividir-video";
     margin-top: 3rem;
@@ -736,8 +724,6 @@ img.imgTarjeta {
     display: inline-block; }
   /* MEDIA QUERIES PAG CONTACTO */
   .dividirComentarios {
-    display: grid;
-    grid-template-columns: 100%;
     grid-template-rows: repeat(3, auto);
     grid-template-areas: "tituloContacto" "formulario-contacto" "imgFormulario"; }
   .tituloContacto .titulo1 {
@@ -755,8 +741,6 @@ img.imgTarjeta {
     grid-area: imgFormulario; }
   /* MEDIA QUERIES PAG INFORMACION */
   .dividirInformacion {
-    display: grid;
-    grid-template-columns: 100%;
     justify-content: center;
     align-items: center;
     text-align: center; }
@@ -782,18 +766,12 @@ img.imgTarjeta {
     left: 0; }
   /* MEDIA QUERIES PAG CURSOS*/
   .dividirCursos {
-    display: grid;
-    grid-template-columns: 100%;
     grid-template-rows: repeat(3, auto);
     grid-template-areas: "tituloCursos" "cursoCocinaAutor" "otrosCursos"; }
   .cursoCocinaAutor {
-    display: grid;
-    grid-template-columns: 100%;
     grid-template-rows: repeat(6, auto);
     grid-template-areas: "tituloCurso1" "tarjetaCurso1" "tituloCurso2" "tarjetaCurso2 " "tituloCurso3" "tarjetaCurso3"; }
   .otrosCursos {
-    display: grid;
-    grid-template-columns: 100%;
     grid-template-rows: repeat(8, auto);
     grid-template-areas: "tituloCurso4" "tarjetaCurso4 " "tituloCurso5" "tarjetaCurso5 " "tituloCurso6" "tarjetaCurso6 " "tituloCurso7" "tarjetaCurso7 "; }
   .tituloCursos .titulo1 {
@@ -802,8 +780,8 @@ img.imgTarjeta {
   .formaTarjeta {
     padding: 1rem; }
   .cursoTitulo {
-    height: auto;
     width: 80%;
+    height: auto;
     padding: .6rem;
     font-size: 0.9rem;
     margin-top: 3rem; }
@@ -815,25 +793,17 @@ img.imgTarjeta {
     height: 5.5rem; }
   /* MEDIA QUERIES PAG PLATOS*/
   .dividirPlatos {
-    display: grid;
-    grid-template-columns: 100%;
     grid-template-rows: repeat(7, auto);
     grid-template-areas: "tituloPlatos" "tituloAltaCocina" "tarjetasFilaUno" "tituloPostres" "tarjetasFilaDos" "tituloTradicional" "tarjetasFilaTres"; }
   .tarjetasFilaUno {
     width: 100%;
-    display: grid;
-    grid-template-columns: 100%;
     grid-template-rows: repeat(4, auto);
     grid-template-areas: "tarjetaUno" "tarjetaDos" "tarjetaTres" "tarjetaCuatro"; }
   .tarjetasFilaDos {
     width: 100%;
-    display: grid;
-    grid-template-columns: 100%;
     grid-template-rows: repeat(4, auto); }
   .tarjetasFilaTres {
     width: 100%;
-    display: grid;
-    grid-template-columns: 100%;
     grid-template-rows: repeat(4, auto); }
   .tarjetaPlatos {
     margin: auto;
