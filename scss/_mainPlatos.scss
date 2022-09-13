@@ -6,16 +6,16 @@
     "tituloPlatos tituloPlatos tituloPlatos tituloPlatos"
     "tituloAltaCocina tituloAltaCocina tituloAltaCocina tituloAltaCocina"
     "tarjetasFilaUno tarjetasFilaUno tarjetasFilaUno tarjetasFilaUno"
-    "tituloPostres tituloPostres tituloPostres tituloPostres"
-    "tarjetasFilaDos tarjetasFilaDos tarjetasFilaDos tarjetasFilaDos"
     "tituloTradicional tituloTradicional tituloTradicional tituloTradicional"
+    "tarjetasFilaDos tarjetasFilaDos tarjetasFilaDos tarjetasFilaDos"
+    "tituloPostres tituloPostres tituloPostres tituloPostres"
     "tarjetasFilaTres  tarjetasFilaTres tarjetasFilaTres tarjetasFilaTres"
 }
 .claseFlex{                               //Clase usada como Extend
     display: flex;
-flex-direction: row;
-justify-content: space-evenly ;
-flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly ;
+    flex-wrap: wrap;
 }
 
 .tituloPlatos{grid-area: tituloPlatos; }

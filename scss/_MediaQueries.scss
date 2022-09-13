@@ -14,11 +14,9 @@
        
     }
     ul{
-        @include altoAncho(100%, 100vh );            //Aplicando Mixin
+        @include altoAncho(100%, 100vh );           //Aplicando Mixin
         position: fixed;
-        
         background-color: #ccc9c9;
-        
         top: 90px;
         left: -150%;
         text-align: center;
@@ -77,8 +75,7 @@
         grid-template-columns: 100%;
     }
    .contenedorImgMain{
-  
-    @extend .claseGrid;                          //Extend
+    @extend .claseGrid;                  //Extend
     grid-template-rows: repeat(4, auto);
    grid-template-areas: 
    "imagenCentralImgUno"
@@ -104,7 +101,7 @@
     width: 100%;
    }
 .contenedorVideoMain{
-    @extend .claseGrid;                                   //Extend
+    @extend .claseGrid;             //Extend
     grid-template-rows: auto auto;
     grid-template-areas: 
     "dividir-videoLinea"
@@ -151,7 +148,7 @@ footer{
 /* MEDIA QUERIES PAG CONTACTO */
 
 .dividirComentarios{ 
-    @extend .claseGrid;                                  //Extend
+    @extend .claseGrid;              //Extend
     grid-template-rows: repeat(3, auto); 
     grid-template-areas: 
     "tituloContacto"
@@ -256,11 +253,10 @@ left: 0;
         padding: 1rem;
     }
 .cursoTitulo{
-    @include altoAncho(80%, auto ); 
-    
-  padding: .6rem;
-   font-size: 0.9rem;
-   margin-top: 3rem;
+    @include altoAncho(80%, auto );          //Aplicando Mixin
+    padding: .6rem;
+    font-size: 0.9rem;
+    margin-top: 3rem;
 }
 .tituloCurso1,.tituloCurso2,.tituloCurso3{
     background-image: linear-gradient(to top, #c8882f, #e19121, #df901b, #e69718, #f39f18);
@@ -279,15 +275,15 @@ left: 0;
     "tituloPlatos"
     "tituloAltaCocina"
     "tarjetasFilaUno"
-    "tituloPostres"
-    "tarjetasFilaDos"
     "tituloTradicional"
+    "tarjetasFilaDos"
+    "tituloPostres"
     "tarjetasFilaTres"
     ;
 }
 .tarjetasFilaUno{
     width: 100%;
-    @extend .claseGrid;                           //Extend
+    @extend .claseGrid;                      //Extend
    grid-template-rows: repeat(4, auto);
    grid-template-areas: 
    "tarjetaUno"
