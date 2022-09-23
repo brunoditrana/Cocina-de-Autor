@@ -658,7 +658,7 @@ img.imgTarjeta {
     grid-template-rows: auto; }
   .tituloMain .titulo1 {
     width: 100%;
-    font-size: 5rem;
+    font-size: 4rem;
     margin-bottom: 1rem; }
   .claseGrid, .contenedorImgMain, .contenedorVideoMain, .dividirComentarios, .dividirInformacion, .dividirCursos, .cursoCocinaAutor, .otrosCursos, .dividirPlatos, .tarjetasFilaUno, .tarjetasFilaDos, .tarjetasFilaTres {
     display: grid;
@@ -693,9 +693,9 @@ img.imgTarjeta {
     display: flex;
     margin: 2rem auto; }
   .titulo-cocina {
-    font-size: 3.5rem; }
+    font-size: 2.8rem; }
   .parrafo-cocina {
-    font-size: 2rem;
+    font-size: 1.8rem;
     padding: 0.5rem;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -724,7 +724,7 @@ img.imgTarjeta {
     grid-template-areas: "tituloContacto" "formulario-contacto" "imgFormulario"; }
   .tituloContacto .titulo1 {
     grid-area: tituloContacto;
-    font-size: 5rem;
+    font-size: 4rem;
     margin: 3rem 0; }
   .formulario-contacto {
     grid-area: formulario-contacto;
@@ -745,7 +745,7 @@ img.imgTarjeta {
     margin: 1rem 0 0 0;
     padding: 0.8rem; }
   .tituloInformacion .titulo1 {
-    font-size: 4.5rem; }
+    font-size: 4rem; }
   .tituloConsigna {
     width: 95%;
     font-size: 2.2rem;
@@ -757,6 +757,8 @@ img.imgTarjeta {
     text-indent: 0; }
   ul.textoParrafo {
     position: static;
+    text-decoration: none;
+    list-style: none;
     height: auto;
     top: 0;
     left: 0; }
@@ -772,7 +774,7 @@ img.imgTarjeta {
     grid-template-areas: "tituloCurso4" "tarjetaCurso4 " "tituloCurso5" "tarjetaCurso5 " "tituloCurso6" "tarjetaCurso6 " "tituloCurso7" "tarjetaCurso7 "; }
   .tituloCursos .titulo1 {
     width: 100%;
-    font-size: 5rem; }
+    font-size: 4rem; }
   .formaTarjeta {
     padding: 1rem; }
   .cursoTitulo {
@@ -807,7 +809,7 @@ img.imgTarjeta {
     margin-bottom: 1.5rem;
     font-size: 0.8rem; }
   .tituloPlatos .titulo1 {
-    font-size: 6rem; }
+    font-size: 4rem; }
   .tituloAltaCocina {
     margin-bottom: 1rem; }
   .parrafoPlatos {
